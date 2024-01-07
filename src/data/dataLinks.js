@@ -1,48 +1,116 @@
-const details = [
+const detailLink = [
   {
-    language: "English (US)",
+    site: "Sign Up",
     url: "#",
   },
   {
-    language: "Filipino",
+    site: "Log In",
     url: "#",
   },
   {
-    language: "Bisaya",
+    site: "Messenger",
     url: "#",
   },
   {
-    language: "Español",
+    site: "Facebook Lite",
     url: "#",
   },
   {
-    language: "日本語",
+    site: "Video",
     url: "#",
   },
   {
-    language: "한국어",
+    site: "Places",
     url: "#",
   },
   {
-    language: "中文(简体)",
+    site: "Games",
     url: "#",
   },
   {
-    language: "العربية",
+    site: "Marketplace",
     url: "#",
   },
   {
-    language: "Português (Brasil)",
+    site: "Meta Store",
     url: "#",
   },
   {
-    language: "Français (France)",
+    site: "Meta Quest",
     url: "#",
   },
   {
-    language: "Deutsch",
+    site: "Instagram",
+    url: "#",
+  },
+  {
+    site: "Threads",
+    url: "#",
+  },
+  {
+    site: "Fundraisers",
+    url: "#",
+  },
+  {
+    site: "Services",
+    url: "#",
+  },
+  {
+    site: "Voting Information Center",
+    url: "#",
+  },
+  {
+    site: "Privacy Policy",
+    url: "#",
+  },
+  {
+    site: "Privacy Center",
+    url: "#",
+  },
+  {
+    site: "Groups",
+    url: "#",
+  },
+  {
+    site: "About",
+    url: "#",
+  },
+  {
+    site: "Create ad",
+    url: "#",
+  },
+  {
+    site: "Create Page",
+    url: "#",
+  },
+  {
+    site: "Developers",
+    url: "#",
+  },
+  {
+    site: "Careers",
+    url: "#",
+  },
+  {
+    site: "Cookies",
+    url: "#",
+  },
+  {
+    site: "Ad choices",
+    url: "#",
+  },
+  {
+    site: "Terms",
+    url: "#",
+  },
+  {
+    site: "Help",
+    url: "#",
+  },
+  {
+    site: "Contact Uploading & Non-Users",
     url: "#",
   },
 ];
 
-export default details;
+export default detailLink;

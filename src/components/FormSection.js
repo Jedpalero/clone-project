@@ -1,6 +1,6 @@
 const FormSection = () => {
   return (
-    <div className="md:w-full md:max-w-sm md:mt-10 max-w-md flex flex-col m-auto mt-20">
+    <div className="md:w-full md:max-w-sm mt-10 max-w-sm flex flex-col m-auto md:mb-10 mb-20 pb-8">
       <form className="flex flex-col shadow-xl rounded-lg p-4 bg-[#ffffff]">
         <div className="mb-3">
           <input
@@ -25,6 +25,7 @@ const FormSection = () => {
           <button className="w-full py-3 px-3 border rounded-md font-bold bg-[#1877F2] text-white text-xl">
             Log In
           </button>
+          {/* eslint-disable-next-line */}
           <a
             href="#"
             className="text-[#1877F2] flex justify-center text-sm m-3 hover:underline"
@@ -40,6 +41,7 @@ const FormSection = () => {
         </div>
       </form>
       <p className="text-center mt-6 text-sm">
+        {/* eslint-disable-next-line */}
         <a href="#" className="cursor-pointer hover:underline">
           <strong>Create a Page</strong>
         </a>{" "}
