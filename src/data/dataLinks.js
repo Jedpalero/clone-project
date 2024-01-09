@@ -1,86 +1,26 @@
 const detailLink = [
   {
-    site: "Sign Up",
-    url: "#",
-  },
-  {
-    site: "Log In",
-    url: "#",
-  },
-  {
-    site: "Messenger",
-    url: "#",
-  },
-  {
-    site: "Facebook Lite",
-    url: "#",
-  },
-  {
-    site: "Video",
-    url: "#",
-  },
-  {
-    site: "Places",
-    url: "#",
-  },
-  {
-    site: "Games",
-    url: "#",
-  },
-  {
-    site: "Marketplace",
-    url: "#",
-  },
-  {
-    site: "Meta Store",
-    url: "#",
-  },
-  {
-    site: "Meta Quest",
-    url: "#",
-  },
-  {
-    site: "Instagram",
-    url: "#",
-  },
-  {
-    site: "Threads",
-    url: "#",
-  },
-  {
-    site: "Fundraisers",
-    url: "#",
-  },
-  {
-    site: "Services",
-    url: "#",
-  },
-  {
-    site: "Voting Information Center",
-    url: "#",
-  },
-  {
-    site: "Privacy Policy",
-    url: "#",
-  },
-  {
-    site: "Privacy Center",
-    url: "#",
-  },
-  {
-    site: "Groups",
-    url: "#",
-  },
-  {
     site: "About",
     url: "#",
   },
   {
-    site: "Create ad",
+    site: "Press",
     url: "#",
   },
   {
-    site: "Create Page",
+    site: "Copyright",
+    url: "#",
+  },
+  {
+    site: "Contact us",
+    url: "#",
+  },
+  {
+    site: "Creators",
+    url: "#",
+  },
+  {
+    site: "Advertise",
     url: "#",
   },
   {
@@ -88,27 +28,23 @@ const detailLink = [
     url: "#",
   },
   {
-    site: "Careers",
-    url: "#",
-  },
-  {
-    site: "Cookies",
-    url: "#",
-  },
-  {
-    site: "Ad choices",
-    url: "#",
-  },
-  {
     site: "Terms",
     url: "#",
   },
   {
-    site: "Help",
+    site: "Privacy",
     url: "#",
   },
   {
-    site: "Contact Uploading & Non-Users",
+    site: "Policy & Safety",
+    url: "#",
+  },
+  {
+    site: "How Youtube works",
+    url: "#",
+  },
+  {
+    site: "Test new features",
     url: "#",
   },
 ];

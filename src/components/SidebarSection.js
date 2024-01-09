@@ -1,50 +1,43 @@
 import { useState } from "react";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
-import {
-  faBars,
-  faChevronDown,
-  faClock,
-  faClockRotateLeft,
-  faHome,
-  faPlay,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SidebarDetails from "./SidebarDetails";
+import HeaderSection from "./HeaderSection";
 
 const SidebarSection = () => {
   const [sidebar, setSidebar] = useState(false);
 
   return (
     <div
-      className={`top-0 bottom-0 bg-[#18181b] text-white fixed h-[100vh] z-[40] ease-in-out duration-300 md:duration-100
-        ${sidebar ? "w-60 md:w-30 overflow-y-scroll" : "md:w-20 w-0"}`}
+      className={`top-0 bottom-0 bg-[#18181b] text-white fixed h-[100vh] z-[-40] ease-in-out duration-300 md:duration-100
+    ${sidebar ? "w-60 md:w-30 overflow-y-scroll" : "md:w-20 w-0"}`}
     >
-      <div className="flex px-7 py-4 gap-3 cursor-pointer">
-        <div className="fixed flex gap-3 bg-[#18181b] p-4 w-80 top-0 ">
-          <FontAwesomeIcon
+      <div className="flex flex-col px-7 py-4 gap-3 cursor-pointer">
+        <div className="fixed flex">
+          {/* <FontAwesomeIcon
             icon={faBars}
             className="mt-1 z-[50]"
             onClick={() => setSidebar(!sidebar)}
-          />
-          <span className="flex items-center cursor-pointer">
+          /> */}
+          {/* <span className="flex items-center cursor-pointer">
             <FontAwesomeIcon icon={faYoutube} className="text-[#ff0000]" />
             <h3 className="font-semibold">YouTube</h3>
-          </span>
+          </span> */}
+          <HeaderSection sidebar={sidebar} setSidebar={setSidebar} />
         </div>
         <div
-          className={`py-4 gap-3 cursor-pointer  mt-[55px] ${
-            sidebar ? "flex  items-center justify-between" : ""
+          className={`gap-3 cursor-pointer  mt-[55px] ${
+            sidebar ? "flex items-center" : ""
           }`}
         >
           <FontAwesomeIcon icon={faHome} className="text-white" />
           <h3 className={` ${sidebar ? "ml-10" : "text-xs mt-1"}`}>Home</h3>
         </div>
+
         <div
-          className={`py-4 gap-3 cursor-pointer fixed  ${
-            sidebar
-              ? "flex  items-center justify-between mt-[100px]"
-              : " mt-[130px]"
+          className={` gap-3 cursor-pointer  ${
+            sidebar ? "flex items-center" : " mt-[130px] fixed"
           }`}
         >
           <svg
@@ -60,10 +53,8 @@ const SidebarSection = () => {
           <h3 className={` ${sidebar ? "ml-8" : "text-xs mt-1"}`}>Shorts</h3>
         </div>
         <div
-          className={`py-4 gap-3 cursor-pointer fixed  ${
-            sidebar
-              ? "flex items-center justify-between mt-[135px]"
-              : "mt-[210px]"
+          className={`gap-3 cursor-pointer ${
+            sidebar ? "flex items-center" : "mt-[210px] fixed"
           }`}
         >
           <svg
@@ -81,27 +72,29 @@ const SidebarSection = () => {
             Subscriptions
           </h3>
         </div>
+
         <div
-          className={`py-4 gap-3 cursor-pointer fixed  ${
-            sidebar
-              ? "flex items-center justify-between mt-[170px]"
-              : "mt-[290px]"
+          className={`gap-3 cursor-pointer  ${
+            sidebar ? "flex items-center" : "mt-[290px] fixed"
           }`}
         >
           {!sidebar && (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              enableBackground="new 0 0 24 24"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
-              focusable="false"
-              className="fill-white"
-            >
-              <path d="m11 7 6 3.5-6 3.5V7zm7 13H4V6H3v15h15v-1zm3-2H6V3h15v15zM7 17h13V4H7v13z"></path>
-            </svg>
+            <>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                enableBackground="new 0 0 24 24"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                focusable="false"
+                className="fill-white"
+              >
+                You
+                <path d="m11 7 6 3.5-6 3.5V7zm7 13H4V6H3v15h15v-1zm3-2H6V3h15v15zM7 17h13V4H7v13z"></path>
+              </svg>
+              <h3 className={` ${sidebar ? "mt-5" : "text-xs mt-1"}`}>You</h3>
+            </>
           )}
-          <h3 className={` ${sidebar ? "mt-5" : "text-xs mt-1"}`}>You</h3>
         </div>
       </div>
       <div className="">{sidebar && <SidebarDetails />}</div>
