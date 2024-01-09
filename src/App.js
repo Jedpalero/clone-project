@@ -1,11 +1,11 @@
-import HeaderSection from "./components/HeaderSection";
-// import SidebarSection from "./components/SidebarSection";
+// import HeaderSection from "./components/HeaderSection";
+import SidebarSection from "./components/SidebarSection";
 
 function App() {
   return (
     <div>
-      <HeaderSection />
-      {/* <SidebarSection /> */}
+      {/* <HeaderSection /> */}
+      <SidebarSection />
     </div>
   );
 }

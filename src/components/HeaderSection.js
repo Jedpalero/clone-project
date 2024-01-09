@@ -2,18 +2,13 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import {
   faBars,
   faBell,
-  faHome,
   faMagnifyingGlass,
   faMicrophone,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
-import SidebarSection from "./SidebarSection";
 
-const HeaderSection = () => {
-  const [sidebar, setSidebar] = useState(false);
-
+const HeaderSection = ({ sidebar, setSidebar }) => {
   return (
     <div className="fixed top-0 left-0 w-full">
       <nav className="flex justify-between px-7 py-3 bg-[#18181b] text-white z-1">
@@ -52,7 +47,6 @@ const HeaderSection = () => {
           <FontAwesomeIcon icon={faUser} className="cursor-pointer" />
         </div>
       </nav>
-      <SidebarSection />
     </div>
   );
 };
