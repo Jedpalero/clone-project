@@ -303,7 +303,9 @@ const SidebarDetails = () => {
             </li>
           </ul>
         ))}
-        <p className="text-xs text-gray-500 mb-5">&#169; 2024 Goggle LLC</p>
+        <p className="text-xs text-gray-500 mb-5 mt-2">
+          &#169; 2024 Goggle LLC
+        </p>
       </div>
     </div>
   );
