@@ -16,11 +16,11 @@ const TagSection = () => {
   // };
 
   return (
-    <div className="flex text-white items-center h-12 bg-[#18181b] z-[-2]">
+    <div className="flex text-white items-center h-12 bg-[#0f0f0f] z-[-2]">
       {/* <Slider {...settings} className="md:w-[56rem] w-[40rem] block ml-10"> */}
       {details.map((detail) => (
-        <ul key={detail.language} className=" pl-8">
-          <li className="px-3 py-1 whitespace-nowrap text-center rounded-md bg-gray-600">
+        <ul key={detail.language} className="md:pl-8 pl-3">
+          <li className="px-3 py-1 whitespace-nowrap text-center rounded-md bg-[#282828]">
             {detail.language}
           </li>
         </ul>

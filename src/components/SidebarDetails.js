@@ -22,7 +22,7 @@ import details from "../data/dataLinks";
 const SidebarDetails = () => {
   return (
     <div className="">
-      <hr className="w-[200px] m-auto h-px bg-gray-200 border-0 dark:bg-gray-700" />
+      <hr className=" w-[230px] m-100% h-px bg-gray-200 border-0 dark:bg-gray-700" />
       <h3 className="ml-6 mt-2">You </h3>
       <div className="cursor-pointer flex items-center ml-7 gap-12 mt-[10px]">
         <FontAwesomeIcon icon={faUser} className="border" />
@@ -44,7 +44,7 @@ const SidebarDetails = () => {
         <FontAwesomeIcon icon={faChevronDown} />
         <h3>Show more</h3>
       </div>
-      <hr className="mt-[20px] w-[200px] m-auto h-px bg-gray-200 border-0 dark:bg-gray-700" />
+      <hr className="mt-[20px] w-[230px] m-100% h-px bg-gray-200 border-0 dark:bg-gray-700" />
       <h3 className="ml-6 mt-2">Subscriptions</h3>
 
       <div className="cursor-pointer flex items-center ml-6 gap-12 mt-[10px]">
@@ -155,7 +155,7 @@ const SidebarDetails = () => {
         <h3 className="">Show 5 more</h3>
       </div>
 
-      <hr className="mt-[20px] w-[200px] m-auto h-px bg-gray-200 border-0 dark:bg-gray-700" />
+      <hr className="mt-[20px] w-[230px] m-100% h-px bg-gray-200 border-0 dark:bg-gray-700" />
       <h3 className="ml-6 mt-2">Explore</h3>
       <div className="cursor-pointer flex items-center ml-7 gap-12 mt-[10px]">
         <FontAwesomeIcon icon={faFire} />
@@ -186,7 +186,7 @@ const SidebarDetails = () => {
         <h3 className="">Fashion & Beauty</h3>
       </div>
 
-      <hr className="mt-[20px] w-[200px] m-auto h-px bg-gray-200 border-0 dark:bg-gray-700" />
+      <hr className="mt-[20px] w-[230px] m-100% h-px bg-gray-200 border-0 dark:bg-gray-700" />
       <h3 className="ml-6 mt-2">More from YouTube</h3>
       <div className="cursor-pointer flex items-center ml-6 gap-9 mt-[10px]">
         <svg
@@ -276,7 +276,7 @@ const SidebarDetails = () => {
         <h3 className="text-sm">YouTube Kids</h3>
       </div>
 
-      <hr className="mt-[20px] w-[200px] m-auto h-px bg-gray-200 border-0 dark:bg-gray-700" />
+      <hr className="mt-[20px] w-[230px] m-100% h-px bg-gray-200 border-0 dark:bg-gray-700" />
       <div className="cursor-pointer flex items-center ml-7 gap-12 mt-[10px]">
         <FontAwesomeIcon icon={faGear} />
         <h3 className="">Settings</h3>
@@ -294,8 +294,8 @@ const SidebarDetails = () => {
         <h3 className="">Send Feedback</h3>
       </div>
 
-      <hr className="mt-[20px] w-[200px] m-auto h-px bg-gray-200 border-0 dark:bg-gray-700" />
-      <div className="flex flex-wrap gap-2 w-[170px] m-auto mt-3">
+      <hr className="mt-[20px] w-[230px] m-100% h-px bg-gray-200 border-0 dark:bg-gray-700" />
+      <div className="flex flex-wrap gap-2 w-[170px] ml-9 mt-3">
         {details.map((detail) => (
           <ul className="" key={detail.site}>
             <li className="text-[12px] text-gray-300 font-semibold cursor-pointer">
