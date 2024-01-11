@@ -1,11 +1,52 @@
-// import { useState } from "react";
 // import TagSection from "./TagSection";
 
-const LandingSection = () => {
-  // const [display, setDisplay] = useState(false);
+import Card from "./Card";
+import ShortsCard from "./ShortsCard";
+import { useState } from "react";
+
+const LandingSection = ({ sidebar }) => {
+  const [show, setShow] = useState(false);
+
   return (
     // w-screen top-1/2 left-1/2
-    <div className="min-h-screen absolute  text-black"></div>
+    <div
+      className={`flex flex-col w-full md:w-auto justify-center md:justify-start absolute mt-3 top-[110px]  text-white ${
+        sidebar ? "md:left-[260px] " : "md:left-[110px]"
+      }`}
+    >
+      <Card sidebar={sidebar} />
+      <div
+        className={`flex items-center gap-3${
+          sidebar ? "" : "inline-block items-center"
+        }`}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          focusable="false"
+        >
+          <g>
+            <path
+              d="M17.77,10.32l-1.2-.5L18,9.06a3.74,3.74,0,0,0-3.5-6.62L6,6.94a3.74,3.74,0,0,0,.23,6.74l1.2.49L6,14.93a3.75,3.75,0,0,0,3.5,6.63l8.5-4.5a3.74,3.74,0,0,0-.23-6.74Z"
+              fill="red"
+            ></path>
+            <polygon
+              points="10 14.65 15 12 10 9.35 10 14.65"
+              fill="#fff"
+            ></polygon>
+          </g>
+        </svg>
+        <h3 className="text-xl font-semibold">Shorts</h3>
+      </div>
+      <div className="scrollbar absolute top-[100%] overflow-x-hidden">
+        <ShortsCard sidebar={sidebar} show={show} />
+        <div onClick={() => setShow(!show)} className="cursor-pointer">
+          show more
+        </div>
+      </div>
+    </div>
   );
 };
 
