@@ -1,16 +1,9 @@
-import HeaderSection from "./components/HeaderSection";
-import LandingSection from "./components/LandingSection";
-// import SidebarSection from "./components/SidebarSection";
-import { useState } from "react";
+import SidebarSection from "./components/SidebarSection";
 
 function App() {
-  const [sidebar, setSidebar] = useState(false);
-
   return (
     <div>
-      <HeaderSection sidebar={sidebar} setSidebar={setSidebar} />
-      <LandingSection sidebar={sidebar} />
-      {/* <SidebarSection /> */}
+      <SidebarSection />
     </div>
   );
 }

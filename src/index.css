@@ -10,9 +10,9 @@
       "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* background-color: #ffff; */
-    background-color: #0f0f0f;
-    overflow-x: hidden;
+    background-color: #ffff;
+    /* background-color: #0f0f0f;
+    overflow-x: hidden; */
   }
 }
 code {
