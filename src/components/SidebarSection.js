@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import DropdownMenu from "./DropdownMenu";
 import ArtistDetails from "./ArtistDetails";
+import { Link } from "react-router-dom";
 
 const SidebarSection = () => {
   const settings = {
@@ -28,7 +29,7 @@ const SidebarSection = () => {
   return (
     <div
       // ease-in-out duration-300
-      className={`top-0 bottom-0 bg-[#0f0f0f] text-white fixed h-full  
+      className={`top-0 bottom-0 bg-[#0f0f0f] text-white fixed h-full z-[9999]  
     ${sidebar ? "md:w-[450px]" : "md:w-[80px]"}`}
     >
       <div className="ml-2 mr-2">
@@ -37,24 +38,23 @@ const SidebarSection = () => {
             sidebar ? "pr-[320px] " : ""
           }`}
         >
-          <div className={`${sidebar ? "flex gap-5" : ""}`}>
+          <Link to="/home" className={`${sidebar ? "flex gap-5" : ""}`}>
             <FontAwesomeIcon icon={faHome} className="h-5" />
             {sidebar && (
               <>
                 <h3>Home</h3>
               </>
             )}
-          </div>
-          <div className={`${sidebar ? "flex gap-5" : ""}`}>
+          </Link>
+          <Link to="/search" className={`${sidebar ? "flex gap-5" : ""}`}>
             <FontAwesomeIcon icon={faSearch} className="h-5" />
             {sidebar && (
               <>
                 <h3>Search</h3>
               </>
             )}
-          </div>
+          </Link>
         </div>
-
         <div
           className={`bg-gray-600 rounded-xl p-2 mt-[130px] fixed flex flex-col gap-y-5 ${
             sidebar ? "pr-[20px] " : ""
@@ -63,7 +63,7 @@ const SidebarSection = () => {
           <div className={`${sidebar ? "flex gap-5" : ""}`}>
             <FontAwesomeIcon
               icon={faBars}
-              className="h-5 ml-3"
+              className="h-5 ml-4"
               onClick={() => setSidebar(!sidebar)}
             />
             {sidebar && (
@@ -76,7 +76,7 @@ const SidebarSection = () => {
           </div>
           {sidebar && (
             <>
-              <div className="mb-3 text-center w-[200px]">
+              <div className="mb-3 text-center w-[200px] ml-4">
                 <Slider
                   {...settings}
                   className="h-[5px] w-[380px] flex justify-between"
