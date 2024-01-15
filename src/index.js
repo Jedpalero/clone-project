@@ -1,11 +1,10 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import { createBrowserRouter } from "react-router-dom";
 import { Route, RouterProvider, createRoutesFromElements } from "react-router";
 import Home from "./pages/Home.js";
 import Search from "./pages/Search.js";
+import App from "./App.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,7 +16,5 @@ const router = createBrowserRouter(
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  // <React.StrictMode>
   <RouterProvider router={router} />
-  // </React.StrictMode>
 );
