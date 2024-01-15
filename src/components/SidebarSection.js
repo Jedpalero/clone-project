@@ -29,8 +29,8 @@ const SidebarSection = () => {
   return (
     <div
       // ease-in-out duration-300
-      className={`top-0 bottom-0 bg-[#0f0f0f] text-white fixed h-full z-[9999]  
-    ${sidebar ? "md:w-[450px]" : "md:w-[80px]"}`}
+      className={`top-0 bottom-0 bg-[#0f0f0f] text-white relative h-screen z-[9999]  
+    ${sidebar ? "md:w-[560px]" : "md:w-[80px]"}`}
     >
       <div className="ml-2 mr-2">
         <div
@@ -38,7 +38,11 @@ const SidebarSection = () => {
             sidebar ? "pr-[320px] " : ""
           }`}
         >
-          <Link to="/home" className={`${sidebar ? "flex gap-5" : ""}`}>
+          <Link
+            to="/home"
+            state={{ sidebar }}
+            className={`${sidebar ? "flex gap-5" : ""}`}
+          >
             <FontAwesomeIcon icon={faHome} className="h-5" />
             {sidebar && (
               <>
