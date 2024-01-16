@@ -80,26 +80,23 @@ const SidebarSection = () => {
           </div>
           {sidebar && (
             <>
-              <div className="mb-3 text-center w-[200px] ml-4">
-                <Slider
-                  {...settings}
-                  className="h-[5px] w-[380px] flex justify-between"
-                >
-                  <div className="bg-gray-800 border rounded-xl">
-                    <p>Playlists</p>
+              <div className="text-center flex ">
+                <Slider {...settings} className=" w-[380px] ml-4">
+                  <div className="bg-gray-800 border rounded-full py-1 px-3 block">
+                    Playlists
                   </div>
-                  <div className="bg-gray-800 border rounded-xl">
-                    <h3>Artists</h3>
+                  <div className="bg-gray-800 border rounded-full py-1 px-3 block">
+                    Artists
                   </div>
-                  <div className="bg-gray-800 border rounded-xl">
-                    <h3>Albums</h3>
+                  <div className="bg-gray-800 border rounded-full py-1 px-3 block">
+                    Albums
                   </div>
-                  <div className="bg-gray-800 border rounded-xl">
-                    <h3>Podcast & Shows</h3>
+                  <div className="text-sm bg-gray-800 border rounded-full py-1 px-2">
+                    Podcast & Shows
                   </div>
                 </Slider>
               </div>
-              <div className="flex items-center mt-4">
+              <div className="flex items-center">
                 <FontAwesomeIcon
                   icon={faSearch}
                   onClick={() => setShowInput(!showInput)}
