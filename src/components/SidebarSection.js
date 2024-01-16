@@ -61,7 +61,7 @@ const SidebarSection = () => {
         </div>
         <div
           className={`bg-gray-600 rounded-xl p-2 mt-[130px] fixed flex flex-col gap-y-5 ${
-            sidebar ? "pr-[20px] " : ""
+            sidebar ? "pr-[20px] " : "h-[728px]"
           }`}
         >
           <div className={`${sidebar ? "flex gap-5" : ""}`}>

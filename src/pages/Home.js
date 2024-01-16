@@ -6,6 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import Card from "../components/Card";
 
 const Home = () => {
   return (
@@ -30,7 +31,53 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <label className="text-3xl font-bold">Good afternoon</label>
+      <label className="text-3xl font-bold">Good morning</label>
+      <div className="mt-3 flex flex-wrap gap-2.5 mb-8">
+        <div className="flex flex-wrap items-center w-[450px] bg-gray-700 rounded-md">
+          <img
+            src="https://i.scdn.co/image/ab6761610000e5eb5b4f7224dc981dfa3561288c"
+            alt="logo"
+            className="h-[60px] w-[60px] rounded-md"
+          />
+          <label className="font-bold ml-4">Decibel Worship</label>
+        </div>
+        <div className="flex flex-wrap items-center w-[450px] bg-gray-700 rounded-md">
+          <img
+            src="https://i.scdn.co/image/ab6761610000e5eb5b4f7224dc981dfa3561288c"
+            alt="logo"
+            className="h-[60px] w-[60px] rounded-md"
+          />
+          <label className="font-bold ml-4">Decibel Worship</label>
+        </div>
+        <div className="flex flex-wrap items-center w-[450px] bg-gray-700 rounded-md">
+          <img
+            src="https://i.scdn.co/image/ab6761610000e5eb5b4f7224dc981dfa3561288c"
+            alt="logo"
+            className="h-[60px] w-[60px] rounded-md"
+          />
+          <label className="font-bold ml-4">Decibel Worship</label>
+        </div>
+        <div className="flex flex-wrap items-center w-[450px] bg-gray-700 rounded-md">
+          <img
+            src="https://i.scdn.co/image/ab6761610000e5eb5b4f7224dc981dfa3561288c"
+            alt="logo"
+            className="h-[60px] w-[60px] rounded-md"
+          />
+          <label className="font-bold ml-4">Decibel Worship</label>
+        </div>
+        <div className="flex flex-wrap items-center w-[450px] bg-gray-700 rounded-md">
+          <img
+            src="https://i.scdn.co/image/ab6761610000e5eb5b4f7224dc981dfa3561288c"
+            alt="logo"
+            className="h-[60px] w-[60px] rounded-md"
+          />
+          <label className="font-bold ml-4">Decibel Worship</label>
+        </div>
+      </div>
+      <label className="text-2xl font-bold">Made For Red Lo</label>
+      <Card />
+      <label className="text-2xl font-bold">Recently Played</label>
+      <Card />
     </div>
   );
 };
