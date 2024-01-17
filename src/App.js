@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import SidebarLink from "./components/SidebarLink";
-// import SidebarSection from "./components/SidebarSection";
 import { useState } from "react";
+import Player from "./components/Player";
 
-const [minWidth, maxWidth] = [80, 470];
+const [minWidth, maxWidth] = [70, 470];
 
 function App() {
   const [sidebar, setSidebar] = useState(false);
@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div className="w-full h-screen grid grid-cols-[max-content_auto] grid-rows-[6fr_1fr] gap-y-2 p-2 bg-black">
-      <div className="scrollbar overflow-hidden">
+      <div className="overflow-hidden">
         <SidebarLink
           sidebar={sidebar}
           setSidebar={setSidebar}
@@ -42,13 +42,13 @@ function App() {
           handleMin={handleMin}
         />
       </div>
-      {/* <SidebarSection /> */}
 
-      <main className="scrollbar py-3 px-2 w-full h-full overflow-hidden overflow-y-scroll bg-neutral-700 ">
-        {/* <main className="py-3 px-2 w-[95%] h-[81.5%] bg-neutral-700 fixed ml-[90px] overflow-hidden overflox-y-scroll"> */}
+      <main className="scrollbar py-3 px-2 w-full h-full overflow-hidden overflow-y-scroll bg-neutral-800 ">
         <Outlet context={[sidebar]} />
       </main>
-      <div className="col-span-2 bg-neutral-700">Player</div>
+      <div className="col-span-2 bg-neutral-800 w-full">
+        <Player />
+      </div>
     </div>
   );
 }

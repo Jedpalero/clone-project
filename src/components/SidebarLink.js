@@ -33,7 +33,7 @@ const SidebarLink = ({ sidebar, width, setWidth, minWidth, maxWidth }) => {
     <div className="flex text-white">
       <div
         style={{ width: `${width / 16}rem` }}
-        className={`bg-neutral-700 ${sidebar ? "" : ""}}`}
+        className={`bg-neutral-800 ${sidebar ? "" : ""}}`}
       >
         <div className="ml-2 mr-2" style={{ width: `${width / 16}rem` }}>
           <div
