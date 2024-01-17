@@ -2,8 +2,12 @@ import React from "react";
 
 const ArtistDetails = ({ sidebar }) => {
   return (
-    <>
-      <div className={`${sidebar ? "flex gap-3" : ""}`}>
+    <div
+      className={`space-y-3 flex  flex-col  ${
+        sidebar ? "scrollbar overflow-hidden overflow-y-scroll" : ""
+      }`}
+    >
+      <div className={` ${sidebar ? "flex gap-3" : ""}`}>
         <img
           src="https://misc.scdn.co/liked-songs/liked-songs-64.png"
           alt="logo"
@@ -120,7 +124,20 @@ const ArtistDetails = ({ sidebar }) => {
           </div>
         )}
       </div>
-    </>
+      <div className={`${sidebar ? "flex gap-3" : ""}`}>
+        <img
+          src="https://i.scdn.co/image/ab6761610000f1783fa351bcd2f7a8f06a7bc3ba"
+          alt="logo"
+          className="h-[50px] w-[50px] rounded-full"
+        />
+        {sidebar && (
+          <div>
+            <h3 className="font-semibold">Hillsong Worship</h3>
+            <h4 className="text-[15px]">Artist</h4>
+          </div>
+        )}
+      </div>
+    </div>
   );
 };
 

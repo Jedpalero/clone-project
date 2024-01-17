@@ -8,12 +8,18 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaSearch } from "react-icons/fa";
 import ShortCard from "../components/ShortCard";
+import { useOutletContext } from "react-router-dom";
 
 const Search = () => {
+  const [sidebar] = useOutletContext();
+
   return (
-    <div className="text-white bg-gray-600  pt-4 pl-7 pr-7 rounded-lg">
-      {/* <div className="w-[94%] h-[5%] fixed bg-black"> */}
-      <div className="flex justify-between items-center mb-8">
+    <div className="text-white mt-[70px] ">
+      <div
+        className={`flex flex-wrap justify-between mb-8  bg-neutral-700  top-0 mt-2 p-6 fixed  z-[5] ${
+          sidebar ? "w-[73%]" : "w-[93%]"
+        }`}
+      >
         <div className="flex gap-2 text-3xl">
           <FontAwesomeIcon icon={faChevronCircleLeft} />
           <FontAwesomeIcon icon={faChevronCircleRight} />
@@ -40,21 +46,7 @@ const Search = () => {
           </div>
         </div>
       </div>
-      {/* </div> */}
-      {/* <div className="flex text-center gap-3 mb-5">
-        <div className="bg-gray-800 border rounded-full py-1 px-3 block">
-          Playlists
-        </div>
-        <div className="bg-gray-800 border rounded-full py-1 px-3 block">
-          <h3>Artists</h3>
-        </div>
-        <div className="bg-gray-800 border rounded-full py-1 px-3 block">
-          <h3>Albums</h3>
-        </div>
-        <div className="bg-gray-800 border rounded-full py-1 px-3">
-          <h3>Podcast & Shows</h3>
-        </div>
-      </div> */}
+
       <label className="text-2xl font-bold">Browse all</label>
       <ShortCard />
     </div>
