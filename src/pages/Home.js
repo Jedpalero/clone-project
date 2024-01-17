@@ -7,11 +7,18 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import Card from "../components/Card";
+import { useOutletContext } from "react-router-dom";
 
 const Home = () => {
+  const [sidebar] = useOutletContext();
+
   return (
-    <div className="text-white bg-gray-600  pt-4 pl-7 pr-7 rounded-lg">
-      <div className="flex justify-between items-center mb-3">
+    <div className="text-white mt-[70px]">
+      <div
+        className={`flex flex-wrap  items-center justify-between mb-8 bg-neutral-700 w-[94%] top-0 mt-2 p-6 fixed z-[5] ${
+          sidebar ? "w-[72%]" : "w-[93%]"
+        }`}
+      >
         <div className="flex gap-2 text-3xl">
           <FontAwesomeIcon icon={faChevronCircleLeft} />
           <FontAwesomeIcon icon={faChevronCircleRight} />
@@ -75,6 +82,8 @@ const Home = () => {
         </div>
       </div>
       <label className="text-2xl font-bold">Made For Red Lo</label>
+      <Card />
+      <label className="text-2xl font-bold">Recently Played</label>
       <Card />
       <label className="text-2xl font-bold">Recently Played</label>
       <Card />

@@ -27,14 +27,14 @@ const SidebarSection = () => {
   const [showInput, setShowInput] = useState(false);
 
   return (
+    // bg-[#0f0f0f]
     <div
-      // ease-in-out duration-300
-      className={`top-0 bottom-0 bg-[#0f0f0f] text-white relative h-screen z-[9999]  
+      className={`
     ${sidebar ? "md:w-[560px]" : "md:w-[80px]"}`}
     >
       <div className="ml-2 mr-2">
         <div
-          className={`bg-gray-600 rounded-xl p-5 mt-3 fixed flex flex-col gap-y-5 ${
+          className={`rounded-xl p-5 mt-3 fixed flex flex-col gap-y-5 ${
             sidebar ? "pr-[320px] " : ""
           }`}
         >
@@ -59,9 +59,10 @@ const SidebarSection = () => {
             )}
           </Link>
         </div>
+        <div className="w-4 cursor-col-resize bg-blue-500" />
         <div
           className={`bg-gray-600 rounded-xl p-2 mt-[130px] fixed flex flex-col gap-y-5 ${
-            sidebar ? "pr-[20px] " : "h-[728px]"
+            sidebar ? "pr-[20px] " : ""
           }`}
         >
           <div className={`${sidebar ? "flex gap-5" : ""}`}>
@@ -80,23 +81,26 @@ const SidebarSection = () => {
           </div>
           {sidebar && (
             <>
-              <div className="text-center flex ">
-                <Slider {...settings} className=" w-[380px] ml-4">
-                  <div className="bg-gray-800 border rounded-full py-1 px-3 block">
-                    Playlists
+              <div className="mb-3 text-center w-[200px] ml-4">
+                <Slider
+                  {...settings}
+                  className="h-[5px] w-[380px] flex justify-between"
+                >
+                  <div className="bg-gray-800 border rounded-xl">
+                    <p>Playlists</p>
                   </div>
-                  <div className="bg-gray-800 border rounded-full py-1 px-3 block">
-                    Artists
+                  <div className="bg-gray-800 border rounded-xl">
+                    <h3>Artists</h3>
                   </div>
-                  <div className="bg-gray-800 border rounded-full py-1 px-3 block">
-                    Albums
+                  <div className="bg-gray-800 border rounded-xl">
+                    <h3>Albums</h3>
                   </div>
-                  <div className="text-sm bg-gray-800 border rounded-full py-1 px-2">
-                    Podcast & Shows
+                  <div className="bg-gray-800 border rounded-xl">
+                    <h3>Podcast & Shows</h3>
                   </div>
                 </Slider>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center mt-4">
                 <FontAwesomeIcon
                   icon={faSearch}
                   onClick={() => setShowInput(!showInput)}
