@@ -72,10 +72,10 @@ export default function Sidebar({
   // };
 
   return (
-    <div className="flex text-white mt-2 ">
+    <div className="text-white mt-2 ">
       <div
         style={{ width: `${width / 16}rem` }}
-        className={`bg-neutral-700 ${sidebar ? "" : ""}}`}
+        className={`bg-neutral-800 ${sidebar ? "" : ""}}`}
       >
         {/*<div className="ml-2 mr-2">
           <div
@@ -165,7 +165,7 @@ export default function Sidebar({
                   className={` p-1 pl-8 fixed z-[-3] rounded-md outline-none ease-in-out duration-500 ${
                     showInput
                       ? "md:w-[200px] bg-gray-900"
-                      : "md:w-[10px] bg-neutral-700"
+                      : "md:w-[10px] bg-neutral-800"
                   }`}
                 />
                 <DropdownMenu />

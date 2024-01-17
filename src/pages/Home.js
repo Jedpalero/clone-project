@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import Card from "../components/Card";
 import { useOutletContext } from "react-router-dom";
+import details from "../data/homeCardDetails";
 
 const Home = () => {
   const [sidebar] = useOutletContext();
@@ -15,8 +16,8 @@ const Home = () => {
   return (
     <div className="text-white mt-[70px]">
       <div
-        className={`flex flex-wrap  items-center justify-between mb-8 bg-neutral-700 w-[94%] top-0 mt-2 p-6 fixed z-[5] ${
-          sidebar ? "w-[72%]" : "w-[93%]"
+        className={`flex flex-wrap  items-center justify-between mb-8 bg-neutral-800 w-[94%] top-0 mt-2 p-6 fixed z-[5] ${
+          sidebar ? "w-[72%] ml-3" : "w-[93%]"
         }`}
       >
         <div className="flex gap-2 text-3xl">
@@ -40,46 +41,23 @@ const Home = () => {
       </div>
       <label className="text-3xl font-bold">Good morning</label>
       <div className="mt-3 flex flex-wrap gap-2.5 mb-8">
-        <div className="flex flex-wrap items-center w-[450px] bg-gray-700 rounded-md">
-          <img
-            src="https://i.scdn.co/image/ab6761610000e5eb5b4f7224dc981dfa3561288c"
-            alt="logo"
-            className="h-[60px] w-[60px] rounded-md"
-          />
-          <label className="font-bold ml-4">Decibel Worship</label>
-        </div>
-        <div className="flex flex-wrap items-center w-[450px] bg-gray-700 rounded-md">
-          <img
-            src="https://i.scdn.co/image/ab6761610000e5eb5b4f7224dc981dfa3561288c"
-            alt="logo"
-            className="h-[60px] w-[60px] rounded-md"
-          />
-          <label className="font-bold ml-4">Decibel Worship</label>
-        </div>
-        <div className="flex flex-wrap items-center w-[450px] bg-gray-700 rounded-md">
-          <img
-            src="https://i.scdn.co/image/ab6761610000e5eb5b4f7224dc981dfa3561288c"
-            alt="logo"
-            className="h-[60px] w-[60px] rounded-md"
-          />
-          <label className="font-bold ml-4">Decibel Worship</label>
-        </div>
-        <div className="flex flex-wrap items-center w-[450px] bg-gray-700 rounded-md">
-          <img
-            src="https://i.scdn.co/image/ab6761610000e5eb5b4f7224dc981dfa3561288c"
-            alt="logo"
-            className="h-[60px] w-[60px] rounded-md"
-          />
-          <label className="font-bold ml-4">Decibel Worship</label>
-        </div>
-        <div className="flex flex-wrap items-center w-[450px] bg-gray-700 rounded-md">
-          <img
-            src="https://i.scdn.co/image/ab6761610000e5eb5b4f7224dc981dfa3561288c"
-            alt="logo"
-            className="h-[60px] w-[60px] rounded-md"
-          />
-          <label className="font-bold ml-4">Decibel Worship</label>
-        </div>
+        {details.map((detail) => (
+          <div
+            key={detail.channelName}
+            className={`flex flex-wrap items-center bg-[#121212] bg-opacity-40 rounded-md ${
+              sidebar ? "w-[460px]" : "w-[580px]"
+            }`}
+          >
+            <img
+              src={detail.url}
+              alt="logo"
+              className={`rounded-l-md ${
+                sidebar ? "h-[60px] w-[60px]" : "h-[85px] w-[85px]"
+              }`}
+            />
+            <label className="font-bold ml-4">{detail.channelName}</label>
+          </div>
+        ))}
       </div>
       <label className="text-2xl font-bold">Made For Red Lo</label>
       <Card />
