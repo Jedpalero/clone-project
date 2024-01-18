@@ -4,7 +4,7 @@ const ArtistDetails = ({ sidebar }) => {
   return (
     <div
       className={`space-y-3 flex  flex-col  ${
-        sidebar ? "scrollbar overflow-hidden overflow-y-scroll" : ""
+        sidebar ? "scrollbar overflow-hidden overflow-y-scroll mt-[70px]" : ""
       }`}
     >
       <div className={` ${sidebar ? "flex gap-3" : ""}`}>

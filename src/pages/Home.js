@@ -29,13 +29,13 @@ const Home = () => {
           <button className="rounded-full py-2 px-4 text-sm text-black font-bold bg-white">
             Explore Premium
           </button>
-          <button className="rounded-full py-2 px-4 text-sm font-bold bg-black">
+          <button className="rounded-full py-2 px-4 text-sm font-bold bg-[#121212]">
             Install App
           </button>
-          <div className=" rounded-full px-[6px] py-[1px] bg-black">
+          <div className=" rounded-full px-[6px] py-[1px] bg-[#121212]">
             <FontAwesomeIcon icon={faBell} />
           </div>
-          <div className=" rounded-full px-[6px] py-[1px] bg-black">
+          <div className=" rounded-full px-[6px] py-[1px] bg-[#121212]">
             <FontAwesomeIcon icon={faUser} />
           </div>
         </div>

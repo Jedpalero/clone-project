@@ -24,24 +24,24 @@ const Search = () => {
           <FontAwesomeIcon icon={faChevronCircleLeft} />
           <FontAwesomeIcon icon={faChevronCircleRight} />
           <div className="flex items-center">
-            <FaSearch className="text-lg ml-3 relative z-10 text-black" />
+            <FaSearch className="text-lg ml-3 relative z-10 text-gray-500" />
 
             <input
               type="text"
               id="first_name"
-              className="absolute bg-gray-50 border text-sm rounded-full   block p-2.5 w-[350px] px-10 dark:bg-gray-700 dark:border-gray-600"
+              className="absolute border text-sm rounded-full   block p-2.5 w-[350px] px-10 dark:bg-[#121212] dark:border-gray-600"
               placeholder="what do you want to listen to?"
             ></input>
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <button className="rounded-full py-2 px-4 text-sm font-bold bg-black">
+          <button className="rounded-full py-2 px-4 text-sm font-bold bg-[#121212]">
             Install App
           </button>
-          <div className=" rounded-full px-[6px] py-[1px] bg-black">
+          <div className=" rounded-full px-[6px] py-[1px] bg-[#121212]">
             <FontAwesomeIcon icon={faBell} />
           </div>
-          <div className=" rounded-full px-[6px] py-[1px] bg-black">
+          <div className=" rounded-full px-[6px] py-[1px] bg-[#121212]">
             <FontAwesomeIcon icon={faUser} />
           </div>
         </div>

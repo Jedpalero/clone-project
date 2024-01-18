@@ -6,7 +6,7 @@ const CardRecently = () => {
       {cards.slice(0, 8).map((card) => (
         <div
           key={card.title}
-          className="flex flex-col bg-gray-700 p-3 rounded-lg w-[200px]"
+          className="flex flex-col bg-[#121212] bg-opacity-40 p-3 rounded-lg w-[200px]"
         >
           <img
             alt="logo"

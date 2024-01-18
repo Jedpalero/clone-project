@@ -40,4 +40,20 @@ code {
   .scrollbar::-webkit-scrollbar-thumb:hover {
     background: #c0a0b9;
   }
+
+  /* .card {
+    display: grid;
+    place-items: center;
+    height: 15rem;
+    background: #141414;
+  }
+
+  .grids {
+    display: grid;
+    gap: 0 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    grid-template-rows: auto;
+    grid-auto-rows: 0;
+    overflow: hidden;
+  } */
 }

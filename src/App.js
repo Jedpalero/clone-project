@@ -23,21 +23,11 @@ function App() {
   return (
     <div className="w-full h-screen grid grid-cols-[max-content_auto] grid-rows-[6fr_1fr] gap-y-2 p-2 bg-black">
       <div className="overflow-hidden">
-        <SidebarLink
-          sidebar={sidebar}
-          setSidebar={setSidebar}
-          width={width}
-          setWidth={setWidth}
-          minWidth={minWidth}
-          maxWidth={maxWidth}
-        />
+        <SidebarLink sidebar={sidebar} width={width} setWidth={setWidth} />
         <Sidebar
           sidebar={sidebar}
-          setSidebar={setSidebar}
           width={width}
           setWidth={setWidth}
-          minWidth={minWidth}
-          maxWidth={maxWidth}
           handleMax={handleMax}
           handleMin={handleMin}
         />
