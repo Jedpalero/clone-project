@@ -1,7 +1,6 @@
 import {
   faArrowRight,
   faBars,
-  faHome,
   faPlus,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
@@ -15,15 +14,12 @@ import DropdownMenu from "./DropdownMenu";
 import ArtistDetails from "./ArtistDetails";
 
 // const [minWidth, maxWidth, defaultWidth] = [100, 500, 350];
-// const [minWidth, maxWidth] = [80, 470];
+const [minWidth1, maxWidth1] = [80, 470];
 
 export default function Sidebar({
   sidebar,
-  setSidebar,
   width,
   setWidth,
-  minWidth,
-  maxWidth,
   handleMax,
   handleMin,
 }) {
@@ -50,7 +46,7 @@ export default function Sidebar({
       setWidth((previousWidth) => {
         const newWidth = previousWidth + e.movementX / 2;
 
-        const isWidthInRange = newWidth >= minWidth && newWidth <= maxWidth;
+        const isWidthInRange = newWidth >= minWidth1 && newWidth <= maxWidth1;
 
         return isWidthInRange ? newWidth : previousWidth;
       });
@@ -72,7 +68,7 @@ export default function Sidebar({
   // };
 
   return (
-    <div className="text-white mt-2 ">
+    <div className="flex text-white mt-2 ">
       <div
         style={{ width: `${width / 16}rem` }}
         className={`bg-neutral-800 ${sidebar ? "" : ""}}`}

@@ -1,17 +1,18 @@
-import cards from "../data/cardDetails";
+import cards from "../data/cardDetailsRecently";
 
-const Card = () => {
+const CardRecently = () => {
   return (
-    <div className="flex gap-4 mt-5 mb-5">
+    <div className="flex gap-6 mt-5 mb-5">
       {cards.slice(0, 8).map((card) => (
         <div
           key={card.title}
-          className="flex flex-col bg-gray-700 p-3 items-center rounded-lg w-[200px]"
+          className="flex flex-col bg-gray-700 p-3 rounded-lg w-[200px]"
         >
           <img
             alt="logo"
             src={card.imgLink}
-            className="h-[160px]  w-[170px] rounded-md"
+            className="h-[170px]  w-[170px]"
+            style={{ borderRadius: `${card.boder}` }}
           />
           <div>
             <h3 className="font-bold">{card.title}</h3>
@@ -25,4 +26,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default CardRecently;
