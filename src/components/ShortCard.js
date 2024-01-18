@@ -6,13 +6,14 @@ const ShortCard = () => {
       {cards.slice(0, 40).map((card) => (
         <div
           key={card.imgLink}
-          className="h-[190px] w-[180px] bg-black rounded-xl overflow-hidden mt-5"
+          className="h-[190px] w-[185px] rounded-xl overflow-hidden mt-5"
+          style={{ backgroundColor: `${card.bgColor}` }}
         >
           <h1 className="font-bold text-xl p-4">{card.title}</h1>
           <img
             alt="logo"
             src={card.imgLink}
-            className="h-[100px] w-[100px] rotate-[25deg] ml-[110px] mt-[50px] "
+            className="h-[100px] w-[100px] rotate-[25deg] ml-[100px] mt-[30px] "
           ></img>
         </div>
       ))}

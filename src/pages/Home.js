@@ -9,6 +9,7 @@ import React from "react";
 import Card from "../components/Card";
 import { useOutletContext } from "react-router-dom";
 import details from "../data/homeCardDetails";
+import CardRecently from "../components/CardRecently";
 
 const Home = () => {
   const [sidebar] = useOutletContext();
@@ -17,7 +18,7 @@ const Home = () => {
     <div className="text-white mt-[70px]">
       <div
         className={`flex flex-wrap  items-center justify-between mb-8 bg-neutral-800 w-[94%] top-0 mt-2 p-6 fixed z-[5] ${
-          sidebar ? "w-[72%] ml-3" : "w-[93%]"
+          sidebar ? "w-[71%]" : "w-[93%]"
         }`}
       >
         <div className="flex gap-2 text-3xl">
@@ -62,9 +63,7 @@ const Home = () => {
       <label className="text-2xl font-bold">Made For Red Lo</label>
       <Card />
       <label className="text-2xl font-bold">Recently Played</label>
-      <Card />
-      <label className="text-2xl font-bold">Recently Played</label>
-      <Card />
+      <CardRecently />
     </div>
   );
 };

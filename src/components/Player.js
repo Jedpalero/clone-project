@@ -25,7 +25,7 @@ const Player = () => {
       <div className="flex items-center gap-4 ml-3">
         <img
           src="https://i.scdn.co/image/ab67616d0000b2734f7efa8f0c494356b96797bd"
-          alt="playing image"
+          alt="playingImage"
           className="h-[60px] w-[60px] rounded-md"
         />
         <div>
@@ -76,8 +76,8 @@ const Player = () => {
           <FontAwesomeIcon icon={faSquareCaretRight} />
           <TbMicrophone2 />
           <HiOutlineQueueList />
-          <BiSolidVolumeFull />
           <LuLaptop2 />
+          <BiSolidVolumeFull />
           <input type="range" className="accent-green-500 bg-black/45" />
         </div>
       </div>

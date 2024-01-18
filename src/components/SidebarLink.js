@@ -1,12 +1,11 @@
 import { faHome, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // const [minWidth, maxWidth] = [80, 470];
 
 const SidebarLink = ({ sidebar, width, setWidth, minWidth, maxWidth }) => {
-  // const [width, setWidth] = useState(minWidth);
   const isResized = useRef(false);
 
   useEffect(() => {
