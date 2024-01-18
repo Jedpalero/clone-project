@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-// const [minWidth, maxWidth] = [80, 470];
+const [minWidth, maxWidth] = [80, 470];
 
-const SidebarLink = ({ sidebar, width, setWidth, minWidth, maxWidth }) => {
+const SidebarLink = ({ sidebar, width, setWidth }) => {
   const isResized = useRef(false);
 
   useEffect(() => {
@@ -26,25 +26,14 @@ const SidebarLink = ({ sidebar, width, setWidth, minWidth, maxWidth }) => {
     window.addEventListener("mouseup", () => {
       isResized.current = false;
     });
-  }, []);
+  }, [setWidth]);
 
   return (
     <div className="flex text-white">
-      <div
-        style={{ width: `${width / 16}rem` }}
-        className={`bg-neutral-800 ${sidebar ? "" : ""}}`}
-      >
-        <div className="ml-2 mr-2" style={{ width: `${width / 16}rem` }}>
-          <div
-            className={`rounded-xl p-5 mt-3 flex flex-col gap-y-5 ${
-              sidebar ? "pr-[320px] " : ""
-            }`}
-          >
-            <Link
-              to="/home"
-              state={{ sidebar }}
-              className={`${sidebar ? "flex gap-5" : ""}`}
-            >
+      <div style={{ width: `${width / 16}rem` }} className="bg-neutral-800 ">
+        <div className="ml-2 mr-2">
+          <div className="p-5 mt-3 flex flex-col gap-y-5">
+            <Link to="/home" className={`${sidebar ? "flex gap-5" : ""}`}>
               <FontAwesomeIcon icon={faHome} className="h-5" />
               {sidebar && (
                 <>
