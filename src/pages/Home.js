@@ -18,7 +18,7 @@ const Home = () => {
     <div className="text-white mt-[70px]">
       <div
         className={`flex flex-wrap  items-center justify-between mb-8 bg-neutral-800 w-[94%] top-0 mt-2 p-6 fixed z-[5] ${
-          sidebar ? "w-[71%]" : "w-[93%]"
+          sidebar ? "w-[73%]" : "w-[93%]"
         }`}
       >
         <div className="flex gap-2 text-3xl">

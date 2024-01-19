@@ -2,21 +2,21 @@ import cards from "../data/cardDetails";
 
 const Card = () => {
   return (
-    <div className="flex gap-4 mt-5 mb-5">
-      {cards.slice(0, 8).map((card) => (
+    <div className="grids mb-5 mt-5">
+      {cards.map((card) => (
         <div
           key={card.title}
-          className="flex flex-col bg-[#121212] bg-opacity-40 p-3 items-center rounded-lg w-[200px]"
+          className="card rounded-lg bg-[#121212] p-3 bg-opacity-40 w-[200px]"
         >
           <img
             alt="logo"
             src={card.imgLink}
-            className="h-[160px]  w-[170px] rounded-md"
+            className="h-[140px]  w-[140px] rounded-md"
           />
-          <div>
+          <div className="">
             <h3 className="font-bold">{card.title}</h3>
-            <p className="text-gray-400 text-sm font-semibold">
-              {card.channelName.substring(0, 40)}...
+            <p className="text-gray-400 text-sm font-semibold ">
+              {card.channelName.substring(0, 30)}...
             </p>
           </div>
         </div>

@@ -21,6 +21,8 @@ code {
 }
 
 @layer utilities {
+  /* For Scrollbar Design */
+
   .scrollbar::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -41,13 +43,16 @@ code {
     background: #c0a0b9;
   }
 
-  /* .card {
+  /*to make the size does not change even when resizing*/
+
+  .card {
     display: grid;
     place-items: center;
     height: 15rem;
-    background: #141414;
+    width: 11rem;
   }
 
+  /*to hide the rest of the details instead of going to another row*/
   .grids {
     display: grid;
     gap: 0 1.5rem;
@@ -55,5 +60,13 @@ code {
     grid-template-rows: auto;
     grid-auto-rows: 0;
     overflow: hidden;
-  } */
+  }
+
+  .gridz {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9rem, 3fr));
+    grid-template-rows: auto;
+    grid-auto-rows: 0;
+    overflow: hidden;
+  }
 }

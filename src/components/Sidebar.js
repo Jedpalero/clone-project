@@ -1,6 +1,5 @@
 import {
   faArrowRight,
-  faBars,
   faPlus,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
@@ -60,46 +59,58 @@ export default function Sidebar({
     <div className="flex text-white mt-2 ">
       <div style={{ width: `${width / 16}rem` }} className="bg-neutral-800">
         <div className="rounded-xl p-2  flex flex-col gap-y-5">
-          <div className={`${sidebar ? "flex gap-5" : ""}`}>
+          <div
+            className={`${sidebar ? "flex justify-between items-center" : ""}`}
+          >
             {sidebar ? (
-              <FontAwesomeIcon
-                icon={faBars}
-                className="h-5 ml-4 cursor-pointer text-[#121212]"
-                onClick={handleMin}
-              />
+              <div className="flex items-center gap-7">
+                <svg
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  className="size-6 fill-white ml-4 mt-1"
+                  onClick={handleMin}
+                >
+                  <path d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"></path>
+                </svg>
+                <h3 className="font-bold">Your Library</h3>
+              </div>
             ) : (
-              <FontAwesomeIcon
-                icon={faBars}
-                className="h-5 ml-4 text-white cursor-pointer"
+              <svg
+                data-encore-id="icon"
+                role="img"
+                aria-hidden="true"
+                // viewBox="0 0 24 24"
+                className="size-6 fill-white ml-4 mt-1"
                 onClick={handleMax}
-              />
+              >
+                <path d="M14.5 2.134a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866V21a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1V3a1 1 0 0 1 .5-.866zM16 4.732V20h4V7.041l-4-2.309zM3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zm6 0a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1z"></path>
+              </svg>
             )}
             {sidebar && (
-              <>
-                <h3>Your Library</h3>
-                <FontAwesomeIcon icon={faPlus} className="ml-[195px]" />
+              <div className="flex gap-5 mr-3">
+                <FontAwesomeIcon icon={faPlus} />
                 <FontAwesomeIcon icon={faArrowRight} />
-              </>
+              </div>
             )}
           </div>
+
           {sidebar && (
             <>
-              <div className="mb-3 text-center w-[200px] ml-4 flex">
-                <Slider
-                  {...settings}
-                  className="h-[5px] w-[380px] flex justify-between"
-                >
-                  <div className="bg-[#121212] border rounded-xl">
+              <div className="gridz text-center">
+                <Slider {...settings} className="w-[420px]">
+                  <div className="grid w-[140px] bg-[#121212] border rounded-xl">
                     <p>Playlists</p>
                   </div>
-                  <div className="bg-[#121212] border rounded-xl">
+                  <div className="grid w-[140px] bg-[#121212] border rounded-xl">
                     <h3>Artists</h3>
                   </div>
-                  <div className="bg-[#121212] border rounded-xl">
-                    <h3>Albums</h3>
-                  </div>
-                  <div className="bg-[#121212] border rounded-xl">
+                  <div className="grid w-[140px] bg-[#121212] border rounded-xl">
                     <h3>Podcast & Shows</h3>
+                  </div>
+                  <div className="grid w-[140px] bg-[#121212] border rounded-xl">
+                    <h3>Albums</h3>
                   </div>
                 </Slider>
               </div>

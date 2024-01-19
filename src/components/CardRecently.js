@@ -2,16 +2,16 @@ import cards from "../data/cardDetailsRecently";
 
 const CardRecently = () => {
   return (
-    <div className="flex gap-6 mt-5 mb-5">
-      {cards.slice(0, 8).map((card) => (
+    <div className="grids mt-5 mb-5">
+      {cards.map((card) => (
         <div
           key={card.title}
-          className="flex flex-col bg-[#121212] bg-opacity-40 p-3 rounded-lg w-[200px]"
+          className="card  bg-[#121212] bg-opacity-40 p-3 rounded-lg w-[200px]"
         >
           <img
             alt="logo"
             src={card.imgLink}
-            className="h-[170px]  w-[170px]"
+            className="h-[140px]  w-[140px]"
             style={{ borderRadius: `${card.boder}` }}
           />
           <div>
