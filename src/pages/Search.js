@@ -28,9 +28,11 @@ const Search = () => {
 
             <input
               type="text"
-              id="first_name"
+              id="search"
+              name="search"
               className="absolute border text-sm rounded-full   block p-2.5 w-[350px] px-10 dark:bg-[#121212] dark:border-gray-600"
               placeholder="what do you want to listen to?"
+              autocomplete="off"
             ></input>
           </div>
         </div>
@@ -47,7 +49,7 @@ const Search = () => {
         </div>
       </div>
 
-      <label className="text-2xl font-bold">Browse all</label>
+      <h1 className="text-2xl font-bold">Browse all</h1>
       <ShortCard />
     </div>
   );

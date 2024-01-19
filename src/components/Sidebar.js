@@ -69,7 +69,7 @@ export default function Sidebar({
                   role="img"
                   aria-hidden="true"
                   viewBox="0 0 24 24"
-                  className="size-6 fill-white ml-4 mt-1"
+                  className="size-6 fill-white ml-4 mt-1 cursor-pointer"
                   onClick={handleMin}
                 >
                   <path d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"></path>
@@ -82,7 +82,7 @@ export default function Sidebar({
                 role="img"
                 aria-hidden="true"
                 // viewBox="0 0 24 24"
-                className="size-6 fill-white ml-4 mt-1"
+                className="size-6 fill-white ml-4 mt-1 cursor-pointer"
                 onClick={handleMax}
               >
                 <path d="M14.5 2.134a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866V21a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1V3a1 1 0 0 1 .5-.866zM16 4.732V20h4V7.041l-4-2.309zM3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zm6 0a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1z"></path>
@@ -114,21 +114,26 @@ export default function Sidebar({
                   </div>
                 </Slider>
               </div>
-              <div className="flex fixed items-center mt-[100px]">
-                <FontAwesomeIcon
-                  icon={faSearch}
-                  onClick={() => setShowInput(!showInput)}
-                  className="absolute ml-2 cursor-pointer"
-                />
-                <input
-                  type="text"
-                  placeholder="Search in Your Library"
-                  className={`p-1 pl-8 fixed z-[-3] rounded-md outline-none ease-in-out duration-500 ${
-                    showInput
-                      ? "md:w-[200px] bg-[#121212] bg-opacity-40"
-                      : "md:w-[10px] bg-neutral-800"
-                  }`}
-                />
+              {/* <div className="flex fixed items-center mt-[100px]"> */}
+              <div className="flex justify-between items-center">
+                <div className="">
+                  <FontAwesomeIcon
+                    icon={faSearch}
+                    onClick={() => setShowInput(!showInput)}
+                    className="absolute ml-2 mt-2 cursor-pointer"
+                  />
+                  <input
+                    type="text"
+                    name="search"
+                    autoComplete="off"
+                    placeholder="Search in Your Library"
+                    className={`p-1 pl-8 z-[-3] rounded-md outline-none ease-in-out duration-500 ${
+                      showInput
+                        ? "md:w-[200px] bg-[#121212] bg-opacity-40"
+                        : "md:w-[10px] bg-neutral-800"
+                    }`}
+                  />
+                </div>
                 <DropdownMenu />
               </div>
             </>

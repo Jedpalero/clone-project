@@ -6,7 +6,7 @@ const DropdownMenu = () => {
 
   return (
     <>
-      <div className="flex items-center gap-1 ml-[355px]">
+      <div className="flex items-center gap-1 mr-5">
         <h3>Recent</h3>
         <TfiMenuAlt
           onClick={() => setShowDropMenu(!showDropMenu)}
@@ -15,7 +15,8 @@ const DropdownMenu = () => {
       </div>
       {showDropMenu && (
         <>
-          <section className="bg-[#121212] bg-opacity-40 p-4 absolute mt-[340px] ml-[280px] rounded-lg divide-y divide-gray-500 shadow-xl shadow-gray-500/50">
+          {/* <section className="bg-[#121212] bg-opacity-40 p-4 absolute mt-[340px] ml-[280px] rounded-lg divide-y divide-gray-500 shadow-xl shadow-gray-500/50"> */}
+          <section className="bg-[#121212] mt-[340px] ml-[290px] bg-opacity-40 p-4 absolute rounded-lg divide-y divide-gray-500 shadow-xl shadow-gray-500/50">
             <ul className="list-none mt-2 space-y-3 mb-3">
               <h6 className="text-xs">Sort by</h6>
               <li>

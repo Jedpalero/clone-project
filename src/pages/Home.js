@@ -17,8 +17,8 @@ const Home = () => {
   return (
     <div className="text-white mt-[70px]">
       <div
-        className={`flex flex-wrap  items-center justify-between mb-8 bg-neutral-800 w-[94%] top-0 mt-2 p-6 fixed z-[5] ${
-          sidebar ? "w-[73%]" : "w-[93%]"
+        className={`flex  items-center justify-between mb-8 bg-neutral-800 w-[94%] top-0 mt-2 p-6 fixed z-[5] ${
+          sidebar ? "w-[74%]" : "w-[92%]"
         }`}
       >
         <div className="flex gap-2 text-3xl">
@@ -40,7 +40,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <label className="text-3xl font-bold">Good morning</label>
+      <h1 className="text-3xl font-bold">Good morning</h1>
       <div className="mt-3 flex flex-wrap gap-2.5 mb-8">
         {details.map((detail) => (
           <div
@@ -56,13 +56,13 @@ const Home = () => {
                 sidebar ? "h-[60px] w-[60px]" : "h-[85px] w-[85px]"
               }`}
             />
-            <label className="font-bold ml-4">{detail.channelName}</label>
+            <h1 className="font-bold ml-4">{detail.channelName}</h1>
           </div>
         ))}
       </div>
-      <label className="text-2xl font-bold">Made For Red Lo</label>
+      <h1 className="text-2xl font-bold">Made For Red Lo</h1>
       <Card />
-      <label className="text-2xl font-bold">Recently Played</label>
+      <h1 className="text-2xl font-bold">Recently Played</h1>
       <CardRecently />
     </div>
   );
