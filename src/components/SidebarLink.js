@@ -37,7 +37,7 @@ const SidebarLink = ({ sidebar, width, setWidth }) => {
               <FontAwesomeIcon icon={faHome} className="h-5" />
               {sidebar && (
                 <>
-                  <h3>Home</h3>
+                  <h3 className="font-bold">Home</h3>
                 </>
               )}
             </Link>
@@ -45,7 +45,7 @@ const SidebarLink = ({ sidebar, width, setWidth }) => {
               <FontAwesomeIcon icon={faSearch} className="h-5" />
               {sidebar && (
                 <>
-                  <h3>Search</h3>
+                  <h3 className="font-bold">Search</h3>
                 </>
               )}
             </Link>
