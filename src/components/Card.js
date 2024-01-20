@@ -2,18 +2,16 @@ import cards from "../data/cardDetails";
 
 const Card = ({ sidebar }) => {
   return (
-    <div className="md:flex md:flex-wrap md:space-x-3 gap-3">
+    <div className="gridzz  ml-8 mt-5 bg-transparent">
       {cards.map((card) => (
         <div
           key={card.title}
-          className={` cursor-pointer ${
-            sidebar
-              ? "4xl:h-[280px] 4xl:w-[300px] md:h-[380px] md:w-[380px] h-[320px] w-[340px]"
-              : "4xl:h-[330px] 4xl:w-[335px] md:h-[310px] md:w-[330px] h-[320px] w-[340px]"
+          className={` card cursor-pointer rounded-xl bg-transparent${
+            sidebar ? "h-[280px] w-[300px] " : "h-[300px] w-[300px] "
           }`}
         >
-          <img alt="thumbnail" src={card.imgLink} className="rounded-xl" />
-          <div className="flex gap-3 mt-2">
+          <img alt="thumbnail" src={card.imgLink} className="rounded-xl " />
+          <div className="flex gap-3 mt-2 ">
             <span>
               <img
                 id="img"

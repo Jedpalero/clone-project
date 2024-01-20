@@ -3,23 +3,19 @@ import { faBars, faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SidebarDetails from "./SidebarDetails";
 // import HeaderSection from "./HeaderSection";
-import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+// import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 // import TagSection from "./TagSection";
 
 const SidebarSection = ({ sidebar, setSidebar }) => {
   return (
     <div
-      className={`scrollbar top-0 bottom-0 bg-[#0f0f0f] text-white fixed h-full  ease-in-out duration-300 md:duration-100
-    ${
-      sidebar
-        ? "w-60 md:w-30 hover:overflow-y-scroll overflow-y-hidden "
-        : "md:w-[90px] w-0 z-[-40]"
-    }`}
+      className={`
+    ${sidebar ? "z-[-1]" : "grid"}`}
     >
       <div className="flex flex-col px-8 py-5 gap-3 cursor-pointer ">
         <div
-          className={`fixed gap-3 px-7  flex items-center ${
-            sidebar ? "bg-[#0f0f0f] w-[240px] left-0 top-0 h-[52px] " : ""
+          className={` md:hidden block gap-3 px-7 items-center ${
+            sidebar ? "w-[240px] left-0 top-0 h-[52px]  flex" : ""
           }`}
         >
           <FontAwesomeIcon

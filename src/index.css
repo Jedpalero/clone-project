@@ -10,7 +10,7 @@
       "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* background-color: #ffff; */
+    background-color: #ffff;
     background-color: #0f0f0f;
     overflow-x: hidden;
   }
@@ -39,5 +39,87 @@ code {
 
   .scrollbar::-webkit-scrollbar-thumb:hover {
     background: #c0a0b9;
+  }
+
+  .card {
+    display: grid;
+    place-items: center;
+    /* height: 300px;
+    width: 300px; */
+  }
+
+  .gridz {
+    display: grid;
+    gap: 0 7rem;
+    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+    grid-template-rows: auto;
+    grid-auto-rows: 0;
+    overflow: hidden;
+  }
+
+  /* .gridy {
+    display: grid;
+    gap: 0 7rem;
+    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+    grid-template-rows: auto;
+    grid-auto-rows: 0;
+    overflow: hidden;
+  } */
+
+  .grids {
+    display: grid;
+    gap: 0 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    grid-template-rows: auto;
+    grid-auto-rows: 0;
+    overflow: hidden;
+  }
+
+  .gridzz {
+    display: grid;
+    gap: 0 11rem;
+    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+    grid-template-rows: auto;
+    grid-auto-rows: 0;
+    overflow: hidden;
+  }
+  .header {
+    background-color: #0f0f0f;
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  .sidebar {
+    background-color: #0f0f0f;
+    color: white;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    position: fixed;
+    height: 100vh;
+  }
+
+  .sidebarSmall {
+    /* background-color: red; */
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+
+  .main {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; */
+  }
+
+  .section {
+    border-radius: 10px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .section1 {
+    border-radius: 10px;
+    grid-column: 1/2;
+    grid-row: 2/2;
   }
 }

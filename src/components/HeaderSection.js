@@ -1,4 +1,3 @@
-import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import {
   faBars,
   faBell,
@@ -7,17 +6,11 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import TagSection from "./TagSection";
-import SidebarSection from "./SidebarSection";
-// import { useState } from "react";
-// import LandingSection from "./LandingSection";
 
 const HeaderSection = ({ sidebar, setSidebar }) => {
-  // const [sidebar, setSidebar] = useState(false);
-
   return (
-    <div className="fixed top-0 left-0 w-full z-50">
-      <nav className="flex justify-between px-7 py-3 bg-[#0f0f0f] text-white">
+    <div className="m-3">
+      <nav className="flex justify-between  text-white">
         <div className="flex items-center gap-3 mb-1 cursor-pointer">
           <FontAwesomeIcon icon={faBars} onClick={() => setSidebar(!sidebar)} />
           <span className="flex items-center cursor-pointer">
@@ -69,16 +62,6 @@ const HeaderSection = ({ sidebar, setSidebar }) => {
           <FontAwesomeIcon icon={faUser} className="cursor-pointer" />
         </div>
       </nav>
-      <SidebarSection sidebar={sidebar} setSidebar={setSidebar} />
-      <div
-        className={`scrollbar right-0 top-13 z-[-5] w-full hover:overflow-x-scroll  overflow-hidden ${
-          sidebar
-            ? "4xl:w-[88%] md:w-[86%] fixed "
-            : "fixed 4xl:w-[95%] md:w-[94%] w-[100%]"
-        }`}
-      >
-        <TagSection />
-      </div>
     </div>
   );
 };
