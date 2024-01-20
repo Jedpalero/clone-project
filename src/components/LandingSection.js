@@ -1,5 +1,3 @@
-// import TagSection from "./TagSection";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Card from "./Card";
 import ShortsCard from "./ShortsCard";
@@ -10,8 +8,7 @@ const LandingSection = ({ sidebar }) => {
   const [show, setShow] = useState(false);
 
   return (
-    // w-screen top-1/2 left-1/2
-    <div className={`text-white ${sidebar ? "" : ""}`}>
+    <div className={`text-white md:mb-0 mb-[3rem] ${sidebar ? "" : ""}`}>
       <Card sidebar={sidebar} />
       <Card sidebar={sidebar} />
       <div className={` m-5 ${sidebar ? "" : ""}`}>
@@ -35,13 +32,6 @@ const LandingSection = ({ sidebar }) => {
         </svg>
         <h3 className="text-xl font-semibold">Shorts</h3>
       </div>
-      {/* <div className="md:overflow-x-hidden "> */}
-      {/* <div className="absolute top-[100%] "> */}
-      {/* <ShortsCard sidebar={sidebar} show={show} />
-          <div
-            onClick={() => setShow(!show)}
-            className="relative border w-[500px] p-2 cursor-pointer text-center rounded-full 4xl:ml-[700px] md:ml-[500px] flex items-center justify-center gap-2 m-4"
-          > */}
 
       <div className="p-2 text-center rounded-full">
         <ShortsCard sidebar={sidebar} show={show} />
@@ -62,7 +52,6 @@ const LandingSection = ({ sidebar }) => {
           )}
         </div>
       </div>
-      {/* <hr className="w-[99%] absolute bottom-[20px] overflow-hidden z-0" /> */}
     </div>
   );
 };

@@ -10,12 +10,12 @@ const SidebarSection = ({ sidebar, setSidebar }) => {
   return (
     <div
       className={`
-    ${sidebar ? "z-[-1]" : "grid"}`}
+    ${sidebar ? "z-[-1] " : ""}`}
     >
-      <div className="flex flex-col px-8 py-5 gap-3 cursor-pointer ">
+      <div className="flex flex-col px-8 py-5 cursor-pointer ">
         <div
-          className={` md:hidden block gap-3 px-7 items-center ${
-            sidebar ? "w-[240px] left-0 top-0 h-[52px]  flex" : ""
+          className={` md:hidden block gap-3 items-center ${
+            sidebar ? "w-[240px] flex" : ""
           }`}
         >
           <FontAwesomeIcon
@@ -44,11 +44,11 @@ const SidebarSection = ({ sidebar, setSidebar }) => {
             <h3 className="font-semibold text-lg">YouTube</h3>
           </span>
         </div>
-        {/* <HeaderSection sidebar={sidebar} setSidebar={setSidebar} /> */}
-        <div className={`${sidebar ? "" : "hidden md:block"}`}>
+
+        <div className={`${sidebar ? "hidden md:block" : ""}`}>
           <div
-            className={`gap-3 cursor-pointer  mt-[55px] ${
-              sidebar ? "flex items-center" : ""
+            className={`gap-3 cursor-pointer  md:mt-[55px] mt-[40px] ${
+              sidebar ? "md:flex items-center hidden" : ""
             }`}
           >
             <FontAwesomeIcon icon={faHome} className="text-white" />

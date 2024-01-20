@@ -10,9 +10,8 @@
       "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #ffff;
+    /* background-color: #ffff; */
     background-color: #0f0f0f;
-    overflow-x: hidden;
   }
 }
 code {
@@ -90,7 +89,6 @@ code {
   }
 
   .sidebar {
-    background-color: #0f0f0f;
     color: white;
     grid-column: 1/2;
     grid-row: 2/3;
@@ -120,6 +118,11 @@ code {
   .section1 {
     border-radius: 10px;
     grid-column: 1/2;
-    grid-row: 2/2;
+    grid-row: 2/3;
+  }
+  .footer {
+    border-radius: 10px;
+    grid-column: 1/2;
+    grid-row: 3/4;
   }
 }
