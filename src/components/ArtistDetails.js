@@ -2,11 +2,8 @@ import React from "react";
 
 const ArtistDetails = ({ sidebar }) => {
   return (
-    <div
-      className={`space-y-3 flex  flex-col  ${
-        sidebar ? "scrollbar overflow-hidden overflow-y-scroll" : ""
-      }`}
-    >
+    // scrollbar overflow-hidden overflow-y-scroll
+    <div className={`space-y-3 flex  flex-col  ${sidebar ? "" : ""}`}>
       <div className={` ${sidebar ? "flex gap-3" : ""}`}>
         <img
           src="https://misc.scdn.co/liked-songs/liked-songs-64.png"

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
-const [minWidth, maxWidth] = [80, 470];
+const [minWidth, maxWidth] = [70, 470];
 
 const SidebarLink = ({ sidebar, width, setWidth }) => {
   const isResized = useRef(false);
@@ -29,8 +29,9 @@ const SidebarLink = ({ sidebar, width, setWidth }) => {
   }, [setWidth]);
 
   return (
+    // bg-neutral-800
     <div className="flex text-white">
-      <div style={{ width: `${width / 16}rem` }} className="bg-neutral-800 ">
+      <div style={{ width: `${width / 16}rem` }} className=" ">
         <div className="ml-2 mr-2">
           <div className="p-5 mt-3 flex flex-col gap-y-5">
             <NavLink
