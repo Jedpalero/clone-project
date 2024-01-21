@@ -12,7 +12,7 @@ import DropdownMenu from "./DropdownMenu";
 import ArtistDetails from "./ArtistDetails";
 
 // const [minWidth, maxWidth, defaultWidth] = [100, 500, 350];
-const [minWidth1, maxWidth1] = [80, 470];
+const [minWidth1, maxWidth1] = [70, 470];
 
 export default function Sidebar({
   sidebar,
@@ -56,9 +56,9 @@ export default function Sidebar({
   }, [setWidth]);
 
   return (
-    <div className="flex text-white mt-2 ">
-      <div style={{ width: `${width / 16}rem` }} className="bg-neutral-800">
-        <div className="rounded-xl p-2  flex flex-col gap-y-5">
+    <div className="flex text-white ">
+      <div style={{ width: `${width / 16}rem` }}>
+        <div className="rounded-xl p-2  flex flex-col gap-y-5 bg-slate-500">
           <div
             className={`${sidebar ? "flex justify-between items-center" : ""}`}
           >
@@ -138,13 +138,14 @@ export default function Sidebar({
               </div>
             </>
           )}
+        </div>
+        <div className="bg-slate-400">
           <ArtistDetails sidebar={sidebar} />
         </div>
+        {/* Handle */}
       </div>
-
-      {/* Handle */}
       <div
-        className="w-2 cursor-col-resize"
+        className="w-1 cursor-col-resize"
         onMouseDown={() => {
           isResized.current = true;
         }}

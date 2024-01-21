@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <div className="text-white mt-[70px]">
       <div
-        className={`flex  items-center justify-between mb-8 bg-neutral-800 w-[94%] top-0 mt-2 p-6 fixed z-[5] ${
+        className={`flex  items-center justify-between mb-8  w-[94%] top-0 mt-2 p-6 fixed z-[5] ${
           sidebar ? "w-[74%]" : "w-[92%]"
         }`}
       >
