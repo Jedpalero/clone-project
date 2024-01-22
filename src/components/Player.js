@@ -21,7 +21,7 @@ const Player = () => {
   const [like, setLike] = useState(false);
 
   return (
-    <div className="flex fixed justify-between text-white mt-10">
+    <div className="flex fixed justify-between text-white mt-5">
       <div className="flex items-center gap-4 ml-3">
         <img
           src="https://i.scdn.co/image/ab67616d0000b2734f7efa8f0c494356b96797bd"
