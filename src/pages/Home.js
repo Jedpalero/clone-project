@@ -15,10 +15,10 @@ const Home = () => {
   const [sidebar] = useOutletContext();
 
   return (
-    <div className="text-white mt-[70px]">
+    <div className="flex flex-col text-white">
       <div
-        className={`flex  items-center justify-between mb-8  w-[94%] top-0 mt-2 p-6 fixed z-[5] ${
-          sidebar ? "w-[74%]" : "w-[92%]"
+        className={`flex items-center justify-between mb-1 p-6 ${
+          sidebar ? "" : ""
         }`}
       >
         <div className="flex gap-2 text-3xl">
@@ -40,30 +40,33 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <h1 className="text-3xl font-bold">Good morning</h1>
-      <div className="mt-3 flex flex-wrap gap-2.5 mb-8">
-        {details.map((detail) => (
-          <div
-            key={detail.channelName}
-            className={`flex flex-wrap items-center bg-[#121212] bg-opacity-40 rounded-md ${
-              sidebar ? "w-[460px]" : "w-[580px]"
-            }`}
-          >
-            <img
-              src={detail.url}
-              alt="logo"
-              className={`rounded-l-md ${
-                sidebar ? "h-[60px] w-[60px]" : "h-[85px] w-[85px]"
+
+      <div className="scrollbar overflow-y-scroll h-[47rem]">
+        <h1 className="text-3xl font-bold">Good morning</h1>
+        <div className="mt-3 flex flex-wrap gap-2.5 mb-8">
+          {details.map((detail) => (
+            <div
+              key={detail.channelName}
+              className={`flex flex-wrap items-center bg-[#121212] bg-opacity-40 rounded-md ${
+                sidebar ? "w-[460px]" : "w-[580px]"
               }`}
-            />
-            <h1 className="font-bold ml-4">{detail.channelName}</h1>
-          </div>
-        ))}
+            >
+              <img
+                src={detail.url}
+                alt="logo"
+                className={`rounded-l-md ${
+                  sidebar ? "h-[60px] w-[60px]" : "h-[85px] w-[85px]"
+                }`}
+              />
+              <h1 className="font-bold ml-4">{detail.channelName}</h1>
+            </div>
+          ))}
+        </div>
+        <h1 className="text-2xl font-bold">Made For Red Lo</h1>
+        <Card />
+        <h1 className="text-2xl font-bold">Recently Played</h1>
+        <CardRecently />
       </div>
-      <h1 className="text-2xl font-bold">Made For Red Lo</h1>
-      <Card />
-      <h1 className="text-2xl font-bold">Recently Played</h1>
-      <CardRecently />
     </div>
   );
 };

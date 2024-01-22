@@ -2,7 +2,6 @@ import {
   faBell,
   faChevronCircleLeft,
   faChevronCircleRight,
-  // faSearch,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,10 +13,10 @@ const Search = () => {
   const [sidebar] = useOutletContext();
 
   return (
-    <div className="text-white mt-[70px] ">
+    <div className="flex flex-col text-white ">
       <div
-        className={`flex flex-wrap justify-between mb-8  bg-neutral-800  top-0 mt-2 p-6 fixed  z-[5] ${
-          sidebar ? "w-[72%] ml-3" : "w-[93%]"
+        className={`flex items-center justify-between mb-1 p-6  ${
+          sidebar ? "" : ""
         }`}
       >
         <div className="flex gap-2 text-3xl">
@@ -48,9 +47,14 @@ const Search = () => {
           </div>
         </div>
       </div>
-
-      <h1 className="text-2xl font-bold">Browse all</h1>
-      <ShortCard />
+      <div className="scrollbar overflow-y-scroll h-[47rem]">
+        <h1 className="text-2xl font-bold">Browse all</h1>
+        <ShortCard />
+        <ShortCard />
+        <ShortCard />
+        <ShortCard />
+        <ShortCard />
+      </div>
     </div>
   );
 };

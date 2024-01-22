@@ -31,7 +31,7 @@ function App() {
           <SidebarLink sidebar={sidebar} width={width} setWidth={setWidth} />
         </div>
 
-        <div className="artist rounded-xl overflow-hidden bg-neutral-800">
+        <div className="rounded-xl overflow-hidden bg-neutral-800">
           <div className="edit1">
             <Sidebar
               sidebar={sidebar}
@@ -44,10 +44,11 @@ function App() {
         </div>
       </div>
 
-      <section className="main bg-neutral-800 scrollbar overflow-hidden overflow-y-scroll py-3 px-2 w-full h-full gap-3">
+      <section className="main bg-neutral-800 scrollbar overflow-hidden  px-2 w-full h-full rounded-xl">
         <Outlet context={[sidebar]} />
       </section>
-      <div className="player bg-neutral-800">
+
+      <div className="player bg-neutral-800 rounded-xl">
         <Player />
       </div>
     </div>
