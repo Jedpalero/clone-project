@@ -1,14 +1,9 @@
-import {
-  faArrowRight,
-  faPlus,
-  faSearch,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import DropdownMenu from "./DropdownMenu";
 import ArtistDetails from "./ArtistDetails";
 
 // const [minWidth, maxWidth, defaultWidth] = [100, 500, 350];
@@ -30,9 +25,6 @@ export default function Sidebar({
     arrows: true,
   };
 
-  // const [sidebar, setSidebar] = useState(false);
-  // const [width, setWidth] = useState(minWidth);
-  const [showInput, setShowInput] = useState(false);
   const isResized = useRef(false);
 
   useEffect(() => {
@@ -56,14 +48,14 @@ export default function Sidebar({
   }, [setWidth]);
 
   return (
-    <div className="flex text-white ">
-      <div style={{ width: `${width / 16}rem` }}>
-        <div className="rounded-xl p-2  flex flex-col gap-y-5 bg-slate-500">
+    <div className="flex text-white">
+      <div style={{ width: `${width / 16}rem` }} className="">
+        <div className="p-2 flex flex-col">
           <div
             className={`${sidebar ? "flex justify-between items-center" : ""}`}
           >
             {sidebar ? (
-              <div className="flex items-center gap-7">
+              <div className="flex items-center gap-7 mb-2">
                 <svg
                   data-encore-id="icon"
                   role="img"
@@ -81,7 +73,6 @@ export default function Sidebar({
                 data-encore-id="icon"
                 role="img"
                 aria-hidden="true"
-                // viewBox="0 0 24 24"
                 className="size-6 fill-white ml-4 mt-1 cursor-pointer"
                 onClick={handleMax}
               >
@@ -114,38 +105,21 @@ export default function Sidebar({
                   </div>
                 </Slider>
               </div>
-              {/* <div className="flex fixed items-center mt-[100px]"> */}
-              <div className="flex justify-between items-center">
-                <div className="">
-                  <FontAwesomeIcon
-                    icon={faSearch}
-                    onClick={() => setShowInput(!showInput)}
-                    className="absolute ml-2 mt-2 cursor-pointer"
-                  />
-                  <input
-                    type="text"
-                    name="search"
-                    autoComplete="off"
-                    placeholder="Search in Your Library"
-                    className={`p-1 pl-8 z-[-3] rounded-md outline-none ease-in-out duration-500 ${
-                      showInput
-                        ? "md:w-[200px] bg-[#121212] bg-opacity-40"
-                        : "md:w-[10px] bg-neutral-800"
-                    }`}
-                  />
-                </div>
-                <DropdownMenu />
-              </div>
             </>
           )}
         </div>
-        <div className="bg-slate-400">
+        <div
+          className={`scrollbar edit2 h-[37rem]  p-3 ${
+            sidebar ? "hover:overflow-y-scroll overflow-y-hidden" : ""
+          }`}
+        >
           <ArtistDetails sidebar={sidebar} />
         </div>
-        {/* Handle */}
       </div>
+
+      {/* Handle */}
       <div
-        className="w-1 cursor-col-resize"
+        className="flex w-2 cursor-col-resize"
         onMouseDown={() => {
           isResized.current = true;
         }}

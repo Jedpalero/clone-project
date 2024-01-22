@@ -1,9 +1,38 @@
-import React from "react";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import DropdownMenu from "./DropdownMenu";
+import { useState } from "react";
 
-const ArtistDetails = ({ sidebar }) => {
+const ArtistDetails = ({ sidebar, setWidth, width }) => {
+  const [showInput, setShowInput] = useState(false);
+
   return (
-    // scrollbar overflow-hidden overflow-y-scroll
-    <div className={`space-y-3 flex  flex-col  ${sidebar ? "" : ""}`}>
+    <div className={`space-y-3 ${sidebar ? "" : ""}`}>
+      {sidebar && (
+        <>
+          <div className="flex items-center overflow-hidden">
+            <div className="z-10">
+              <FontAwesomeIcon
+                icon={faSearch}
+                onClick={() => setShowInput(!showInput)}
+                className="ml-2 mt-2 cursor-pointer"
+              />
+            </div>
+            <input
+              type="text"
+              name="search"
+              autoComplete="off"
+              placeholder="Search in Your Library"
+              className={`p-2 pl-8 rounded-md outline-none ease-in-out duration-500 absolute ${
+                showInput
+                  ? "md:w-[200px] bg-[#121212] bg-opacity-40"
+                  : "md:w-[10px] bg-transparent"
+              }`}
+            />
+            <DropdownMenu />
+          </div>
+        </>
+      )}
       <div className={` ${sidebar ? "flex gap-3" : ""}`}>
         <img
           src="https://misc.scdn.co/liked-songs/liked-songs-64.png"
@@ -123,13 +152,13 @@ const ArtistDetails = ({ sidebar }) => {
       </div>
       <div className={`${sidebar ? "flex gap-3" : ""}`}>
         <img
-          src="https://i.scdn.co/image/ab6761610000f1783fa351bcd2f7a8f06a7bc3ba"
+          src="https://i.scdn.co/image/ab6761610000e5eb5b4f7224dc981dfa3561288c"
           alt="logo"
           className="h-[50px] w-[50px] rounded-full"
         />
         {sidebar && (
           <div>
-            <h3 className="font-semibold">Hillsong Worship</h3>
+            <h3 className="font-semibold">Decibel Worship</h3>
             <h4 className="text-[15px]">Artist</h4>
           </div>
         )}
