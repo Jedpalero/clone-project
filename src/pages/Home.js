@@ -10,14 +10,15 @@ import Card from "../components/Card";
 import { useOutletContext } from "react-router-dom";
 import details from "../data/homeCardDetails";
 import CardRecently from "../components/CardRecently";
+import FooterMenu from "../components/FooterMenu";
 
 const Home = () => {
   const [sidebar] = useOutletContext();
 
   return (
-    <div className="flex flex-col text-white">
+    <div className="flex flex-col text-white ">
       <div
-        className={`flex items-center justify-between mb-1 p-6 ${
+        className={`md:flex items-center justify-between mb-1 p-6 hidden ${
           sidebar ? "" : ""
         }`}
       >
@@ -41,8 +42,16 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="scrollbar overflow-y-scroll h-[47rem]">
-        <h1 className="text-3xl font-bold">Good morning</h1>
+      <div className="md:scrollbar md:overflow-y-scroll overflow-hidden md:h-[47rem] mb-[55px]">
+        <h1 className="text-3xl font-bold md:block hidden">Good morning</h1>
+        <div className="md:hidden flex justify-between items-center mt-7">
+          <h1 className="text-2xl font-bold">Good morning</h1>
+          <span className="space-x-3">
+            <FontAwesomeIcon icon={faBell} />
+            <FontAwesomeIcon icon={faUser} />
+          </span>
+        </div>
+
         <div className="mt-3 flex flex-wrap gap-2.5 mb-8">
           {details.map((detail) => (
             <div
@@ -66,6 +75,9 @@ const Home = () => {
         <Card />
         <h1 className="text-2xl font-bold">Recently Played</h1>
         <CardRecently />
+      </div>
+      <div className="flex w-full fixed bottom-0 left-0 md:hidden">
+        <FooterMenu />
       </div>
     </div>
   );

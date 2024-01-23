@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaSearch } from "react-icons/fa";
 import ShortCard from "../components/ShortCard";
 import { useOutletContext } from "react-router-dom";
+import FooterMenu from "../components/FooterMenu";
 
 const Search = () => {
   const [sidebar] = useOutletContext();
@@ -15,7 +16,7 @@ const Search = () => {
   return (
     <div className="flex flex-col text-white ">
       <div
-        className={`flex items-center justify-between mb-1 p-6  ${
+        className={`md:flex items-center justify-between mb-1 p-6 hidden  ${
           sidebar ? "" : ""
         }`}
       >
@@ -31,7 +32,7 @@ const Search = () => {
               name="search"
               className="absolute border text-sm rounded-full   block p-2.5 w-[350px] px-10 dark:bg-[#121212] dark:border-gray-600"
               placeholder="what do you want to listen to?"
-              autocomplete="off"
+              autoComplete="off"
             ></input>
           </div>
         </div>
@@ -47,13 +48,32 @@ const Search = () => {
           </div>
         </div>
       </div>
-      <div className="scrollbar overflow-y-scroll h-[47rem]">
-        <h1 className="text-2xl font-bold">Browse all</h1>
+
+      <div className="md:scrollbar md:overflow-y-scroll md:h-[47rem] mb-[75px]">
+        <h1 className="text-2xl font-bold md:block hidden">Browse all</h1>
+        <h1 className="text-2xl font-bold md:hidden block mb-5 mt-7">Search</h1>
+        <div className="flex md:hidden">
+          <FaSearch className="text-lg ml-3 mt-2 relative z-10 text-gray-500" />
+          <input
+            type="text"
+            id="search1"
+            name="search1"
+            className="absolute text-sm block p-2 w-[330px] px-10 dark:bg-[#302b2be3] dark:border-gray-600"
+            placeholder="what do you want to listen to?"
+            autoComplete="off"
+          ></input>
+        </div>
+        <div className="md:hidden flex justify-between items-center mt-7">
+          <h1 className="text-md font-bold">Browse all</h1>
+        </div>
         <ShortCard />
         <ShortCard />
         <ShortCard />
-        <ShortCard />
-        <ShortCard />
+        {/* <ShortCard /> */}
+        {/* <ShortCard /> */}
+      </div>
+      <div className="flex w-full fixed bottom-0 left-0 md:hidden">
+        <FooterMenu />
       </div>
     </div>
   );
