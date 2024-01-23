@@ -11,12 +11,33 @@ import { useOutletContext } from "react-router-dom";
 import details from "../data/homeCardDetails";
 import CardRecently from "../components/CardRecently";
 import FooterMenu from "../components/FooterMenu";
+import { useState, useEffect } from "react";
+import CardSwipeCarousel from "../mobile/CardSwipeCarousel";
+import CardRecentlyCarousel from "../mobile/CardRecentlyCarousel";
 
 const Home = () => {
   const [sidebar] = useOutletContext();
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 720);
+
+  //choose the screen size
+  const handleResize = () => {
+    if (window.innerWidth < 720) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  // create an event listener
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
 
   return (
-    <div className="flex flex-col text-white ">
+    <div className="flex flex-col text-white mb-3">
       <div
         className={`md:flex items-center justify-between mb-1 p-6 hidden ${
           sidebar ? "" : ""
@@ -57,24 +78,44 @@ const Home = () => {
             <div
               key={detail.channelName}
               className={`flex flex-wrap items-center bg-[#121212] bg-opacity-40 rounded-md ${
-                sidebar ? "w-[460px]" : "w-[580px]"
+                sidebar ? "w-[460px]" : "md:w-[580px] w-[150px]"
               }`}
             >
               <img
                 src={detail.url}
                 alt="logo"
                 className={`rounded-l-md ${
-                  sidebar ? "h-[60px] w-[60px]" : "h-[85px] w-[85px]"
+                  sidebar
+                    ? "h-[60px] w-[60px]"
+                    : "md:h-[85px] md:w-[85px] h-[55px] w-[55px]"
                 }`}
               />
-              <h1 className="font-bold ml-4">{detail.channelName}</h1>
+              <h1 className="font-bold md:ml-4 ml-2 md:text-[15px] text-[10px]">
+                {detail.channelName}
+              </h1>
             </div>
           ))}
         </div>
         <h1 className="text-2xl font-bold">Made For Red Lo</h1>
-        <Card />
+        {isMobile ? (
+          <>
+            <CardSwipeCarousel />
+          </>
+        ) : (
+          <>
+            <Card />
+          </>
+        )}
         <h1 className="text-2xl font-bold">Recently Played</h1>
-        <CardRecently />
+        {isMobile ? (
+          <>
+            <CardRecentlyCarousel />
+          </>
+        ) : (
+          <>
+            <CardRecently />
+          </>
+        )}
       </div>
       <div className="flex w-full fixed bottom-0 left-0 md:hidden">
         <FooterMenu />
