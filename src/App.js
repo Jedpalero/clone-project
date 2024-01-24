@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div
-      className={`w-full md:grid md:h-screen rounded-lg md:grid-cols-[min-content_auto] md:grid-rows-[6fr_0.7fr]  text-white md:gap-2 gap-1 p-2 ${
+      className={`w-full md:grid md:h-screen rounded-lg md:grid-cols-[min-content_auto] grid-rows-[8fr_1fr]  text-white md:gap-2 gap-1 p-2 ${
         sidebar ? "grid-cols-[470px_1fr]" : "grid-cols-[70px_1fr]"
       }`}
     >

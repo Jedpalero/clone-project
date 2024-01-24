@@ -1,10 +1,8 @@
 import { faArrowRight, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useRef } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import ArtistDetails from "./ArtistDetails";
+import { motion } from "framer-motion";
 
 // const [minWidth, maxWidth, defaultWidth] = [100, 500, 350];
 const [minWidth1, maxWidth1] = [70, 470];
@@ -16,16 +14,8 @@ export default function Sidebar({
   handleMax,
   handleMin,
 }) {
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: true,
-  };
-
   const isResized = useRef(false);
+  const slide = useRef();
 
   useEffect(() => {
     window.addEventListener("mousemove", (e) => {
@@ -55,7 +45,7 @@ export default function Sidebar({
             className={`${sidebar ? "flex justify-between items-center" : ""}`}
           >
             {sidebar ? (
-              <div className="flex items-center gap-7 mb-2">
+              <div className="flex items-center gap-7 mb-1">
                 <svg
                   data-encore-id="icon"
                   role="img"
@@ -89,22 +79,30 @@ export default function Sidebar({
 
           {sidebar && (
             <>
-              <div className="gridz text-center">
-                <Slider {...settings} className="w-[420px]">
-                  <div className="grid w-[140px] bg-[#121212] border rounded-xl">
+              <motion.div
+                ref={slide}
+                whileTap={{ cursor: "grabbing" }}
+                className="flex text-center mt-3"
+              >
+                <motion.div
+                  drag="x"
+                  dragConstraints={slide}
+                  className="flex gap-3"
+                >
+                  <motion.div className="w-[120px] bg-[#121212] border rounded-xl">
                     <p>Playlists</p>
-                  </div>
-                  <div className="grid w-[140px] bg-[#121212] border rounded-xl">
+                  </motion.div>
+                  <motion.div className="w-[120px] bg-[#121212] border rounded-xl">
                     <h3>Artists</h3>
-                  </div>
-                  <div className="grid w-[140px] bg-[#121212] border rounded-xl">
+                  </motion.div>
+                  <motion.div className="w-[190px] bg-[#121212] border rounded-xl">
                     <h3>Podcast & Shows</h3>
-                  </div>
-                  <div className="grid w-[140px] bg-[#121212] border rounded-xl">
+                  </motion.div>
+                  <motion.div className="w-[120px] bg-[#121212] border rounded-xl">
                     <h3>Albums</h3>
-                  </div>
-                </Slider>
-              </div>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
             </>
           )}
         </div>
