@@ -47,8 +47,8 @@ const FooterMenu = () => {
           to="/library"
           className="flex flex-col items-center"
           style={({ isActive }) => ({
-            color: isActive ? "gray" : "gray",
-            fill: isActive ? "gray" : "gray",
+            color: isActive ? "white" : "gray",
+            fill: isActive ? "white" : "gray",
           })}
         >
           <svg

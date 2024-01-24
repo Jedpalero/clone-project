@@ -10,7 +10,7 @@ import {
 import Home from "./pages/Home.js";
 import Search from "./pages/Search.js";
 import App from "./App.js";
-import Library from "./components/Library.js";
+import Library from "./mobile/Library.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

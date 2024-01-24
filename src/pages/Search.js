@@ -64,12 +64,10 @@ const Search = () => {
           ></input>
         </div>
         <div className="md:hidden flex justify-between items-center mt-7">
-          <h1 className="text-md font-bold">Browse all</h1>
+          <h1 className="text-md font-bold mb-2 md:mb-0">Browse all</h1>
         </div>
         <ShortCard />
         <ShortCard />
-        <ShortCard />
-        {/* <ShortCard /> */}
         {/* <ShortCard /> */}
       </div>
       <div className="flex w-full fixed bottom-0 left-0 md:hidden">
