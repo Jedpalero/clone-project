@@ -1,20 +1,12 @@
 import { faPlus, faSearch, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import details from "../data/libraryDetails";
 import FooterMenu from "../components/FooterMenu";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const Library = () => {
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: true,
-  };
+  const slide = useRef();
 
   return (
     <div className="overflow-y-hidden">
@@ -30,22 +22,26 @@ const Library = () => {
             <FontAwesomeIcon icon={faPlus} />
           </span>
         </div>
-        <div className="gridz text-center">
-          <Slider {...settings} className="w-[380px]">
-            <div className="grid w-[140px] bg-[#121212] border rounded-xl">
+        <motion.div
+          ref={slide}
+          whileTap={{ cursor: "grabbing" }}
+          className="flex text-center mt-3 overflow-hidden"
+        >
+          <motion.div drag="x" dragConstraints={slide} className="flex gap-3">
+            <motion.div className="w-[120px] bg-[#121212] border rounded-xl">
               <p>Playlists</p>
-            </div>
-            <div className="grid w-[140px] bg-[#121212] border rounded-xl">
+            </motion.div>
+            <motion.div className="w-[120px] bg-[#121212] border rounded-xl">
               <h3>Artists</h3>
-            </div>
-            <div className="grid bg-[#121212] border rounded-xl">
+            </motion.div>
+            <motion.div className="w-[190px] bg-[#121212] border rounded-xl">
               <h3>Podcast & Shows</h3>
-            </div>
-            <div className="grid w-[140px] bg-[#121212] border rounded-xl">
+            </motion.div>
+            <motion.div className="w-[120px] bg-[#121212] border rounded-xl">
               <h3>Albums</h3>
-            </div>
-          </Slider>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </div>
       <div className="scrollbar h-[32rem]  p-3 overflow-y-scroll mb-10">
         <h3 className="text-xs mb-3">Most recent</h3>
@@ -62,7 +58,6 @@ const Library = () => {
             </div>
           </div>
         ))}
-        {/* <ArtistDetails sidebar={sidebar} /> */}
       </div>
       <div className="flex w-full fixed bottom-0 left-0 md:hidden">
         <FooterMenu />

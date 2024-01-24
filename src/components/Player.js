@@ -21,7 +21,7 @@ const Player = () => {
   const [like, setLike] = useState(false);
 
   return (
-    <div className="flex fixed justify-between text-white mt-5">
+    <div className="flex justify-between text-white mt-5">
       <div className="flex items-center gap-4 ml-3">
         <img
           src="https://i.scdn.co/image/ab67616d0000b2734f7efa8f0c494356b96797bd"
@@ -42,7 +42,7 @@ const Player = () => {
         )}
       </div>
       <div className="">
-        <div className="ml-[630px] space-x-5 flex items-center">
+        <div className=" space-x-5 flex justify-center items-center">
           <FontAwesomeIcon icon={faShuffle} />
           <FontAwesomeIcon icon={faBackwardStep} className="h-5" />
           {!play ? (
@@ -61,7 +61,7 @@ const Player = () => {
           <FontAwesomeIcon icon={faForwardStep} className="h-5" />
           <FontAwesomeIcon icon={faRepeat} />
         </div>
-        <div className="flex items-center gap-3 ml-[390px]">
+        <div className="flex items-center gap-3 ">
           <h3>0:00</h3>
           <input
             type="range"
@@ -71,8 +71,8 @@ const Player = () => {
           <h3>0:00</h3>
         </div>
       </div>
-      <div className="flex ml-[400px]">
-        <div className="flex items-center gap-2">
+      <div className="">
+        <div className="flex items-center mt-4 gap-2">
           <FontAwesomeIcon icon={faSquareCaretRight} />
           <TbMicrophone2 />
           <HiOutlineQueueList />
