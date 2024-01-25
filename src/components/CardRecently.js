@@ -2,7 +2,7 @@ import cards from "../data/cardDetailsRecently";
 
 const CardRecently = () => {
   return (
-    <div className="grids mt-5 mb-5">
+    <div className="grids mt-5 mb-8">
       {cards.map((card) => (
         <div
           key={card.title}

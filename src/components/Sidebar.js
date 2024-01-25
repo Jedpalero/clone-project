@@ -18,8 +18,13 @@ export default function Sidebar({
   const isResized = useRef(false);
   const slide = useRef();
 
-  const { showInput, showDropMenu, openCloseInput, openCloseDropDown } =
-    useContext(MyContext);
+  const {
+    showInput,
+    showDropMenu,
+    openCloseInput,
+    openCloseDropDown,
+    closeSameFunction,
+  } = useContext(MyContext);
 
   useEffect(() => {
     window.addEventListener("mousemove", (e) => {
@@ -121,6 +126,7 @@ export default function Sidebar({
             showDropMenu={showDropMenu}
             openCloseInput={openCloseInput}
             openCloseDropDown={openCloseDropDown}
+            closeSameFunction={closeSameFunction}
           />
         </div>
       </div>

@@ -2,7 +2,7 @@ import cards from "../data/shortCardDetails";
 
 const ShortCard = () => {
   return (
-    <div className="flex flex-wrap gap-3 md:justify-normal items-center justify-between md:mb-0 mb-3">
+    <div className="flex flex-wrap gap-3 md:justify-normal items-center justify-between md:mb-10 mb-3">
       {cards.slice(0, 40).map((card) => (
         <div
           key={card.imgLink}
