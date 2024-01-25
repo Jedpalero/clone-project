@@ -1,8 +1,9 @@
 import { faArrowRight, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useContext } from "react";
 import ArtistDetails from "./ArtistDetails";
 import { motion } from "framer-motion";
+import { MyContext } from "../MyContext";
 
 // const [minWidth, maxWidth, defaultWidth] = [100, 500, 350];
 const [minWidth1, maxWidth1] = [70, 470];
@@ -16,6 +17,9 @@ export default function Sidebar({
 }) {
   const isResized = useRef(false);
   const slide = useRef();
+
+  const { showInput, showDropMenu, openCloseInput, openCloseDropDown } =
+    useContext(MyContext);
 
   useEffect(() => {
     window.addEventListener("mousemove", (e) => {
@@ -107,11 +111,17 @@ export default function Sidebar({
           )}
         </div>
         <div
-          className={`scrollbar edit2 h-[37rem]  p-3 ${
+          className={`scrollbar edit2 h-[37rem] p-2  ${
             sidebar ? "hover:overflow-y-scroll overflow-y-hidden" : ""
           }`}
         >
-          <ArtistDetails sidebar={sidebar} />
+          <ArtistDetails
+            sidebar={sidebar}
+            showInput={showInput}
+            showDropMenu={showDropMenu}
+            openCloseInput={openCloseInput}
+            openCloseDropDown={openCloseDropDown}
+          />
         </div>
       </div>
 

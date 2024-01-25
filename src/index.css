@@ -107,4 +107,24 @@ code {
     grid-column: 1/2;
     grid-row: 2/3;
   }
+
+  .card:hover {
+    background-color: #393939;
+    transition: all 0.2s ease-in;
+  }
+
+  .card:hover .icon {
+    display: flex;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .top:hover {
+    background-color: #393939;
+    transition: all 0.2s ease-in;
+  }
+
+  .top:hover .icon {
+    display: flex;
+    transition: all 0.3s ease-in-out;
+  }
 }
