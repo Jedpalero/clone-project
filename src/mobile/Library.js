@@ -50,7 +50,8 @@ const Library = () => {
             <img
               src={detail.imgLink}
               alt="logo"
-              className="h-[50px] w-[50px] rounded-md"
+              className="h-[50px] w-[50px]"
+              style={{ borderRadius: `${detail.border}` }}
             />
             <div>
               <h3 className="font-semibold">{detail.artist}</h3>

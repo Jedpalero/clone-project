@@ -77,10 +77,24 @@ const Home = () => {
           {details.map((detail) => (
             <div
               key={detail.channelName}
-              className={`flex flex-wrap items-center bg-[#121212] bg-opacity-40 rounded-md ${
+              className={`top flex flex-wrap items-center bg-[#121212] bg-opacity-40 rounded-md ${
                 sidebar ? "w-[460px]" : "md:w-[580px] w-[150px]"
               }`}
             >
+              <button
+                className={`icon hidden absolute  bg-[#1ed760] rounded-full p-3 drop-shadow-lg  ${
+                  sidebar ? "ml-[400px]" : "ml-[520px]"
+                }`}
+              >
+                <svg
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  className="size-6"
+                >
+                  <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
+                </svg>
+              </button>
               <img
                 src={detail.url}
                 alt="logo"
