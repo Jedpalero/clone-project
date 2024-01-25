@@ -9,6 +9,7 @@ const ArtistDetails = ({
   showDropMenu,
   openCloseInput,
   openCloseDropDown,
+  closeSameFunction,
 }) => {
   return (
     <div className={`space-y-3 ${sidebar ? "" : ""}`}>
@@ -41,7 +42,7 @@ const ArtistDetails = ({
         </>
       )}
 
-      <div className="space-y-3">
+      <div className="space-y-3" onClick={closeSameFunction}>
         {details.map((detail) => (
           <div className="flex gap-3" key={detail.artist}>
             <img

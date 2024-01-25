@@ -70,6 +70,7 @@ function App() {
                 showDropMenu,
                 openCloseInput,
                 openCloseDropDown,
+                closeSameFunction,
               }}
             >
               <Sidebar
