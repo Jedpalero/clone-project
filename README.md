@@ -1,8 +1,11 @@
-# Getting Started with Create React App
+# My Clone Projects
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+![Screenshot youtube-statiic page](https://github.com/Jedpalero/clone-project/assets/140801154/ec995841-5d64-41d1-a9b0-6073daf8a9f5)
+
+
+## YouTube Static Page
 
 In the project directory, you can run:
 
