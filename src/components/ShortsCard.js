@@ -7,7 +7,7 @@ const ShortsCard = ({ sidebar, show }) => {
         <div
           key={card.title}
           className={` card cursor-pointer ${
-            sidebar ? "h-[440px] w-[200px]" : "max-h-[510px] max-w-[210px]"
+            sidebar ? "h-[510px] w-[250px]" : "h-[510px] w-[240px]"
           }`}
         >
           <img

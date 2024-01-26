@@ -10,10 +10,10 @@ const LandingSection = ({ sidebar, isMobile }) => {
 
   return (
     <div className={` text-white md:mb-0 mb-[3rem] ${sidebar ? "" : ""}`}>
-      <div className="ml-4 mr-4">
+      <div className="md:ml-4 md:mr-4">
         <Card sidebar={sidebar} />
       </div>
-      {/* <Card sidebar={sidebar} /> */}
+      <Card sidebar={sidebar} />
       <div className={`flex items-center gap-2 p-2 ${sidebar ? "" : ""}`}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

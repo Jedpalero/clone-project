@@ -160,31 +160,31 @@ const SidebarDetails = () => {
 
       <hr className="mt-[20px] w-[230px] m-100% h-px bg-gray-200 border-0 dark:bg-gray-700 hidden md:block" />
       <h3 className="ml-6 mt-2 hidden md:block">Explore</h3>
-      <div className="cursor-pointer flex items-center ml-7 gap-12 mt-[10px]">
+      <div className="cursor-pointer flex items-center md:ml-7 md:gap-12 ml-3 md:py-0  py-1.5 gap-5 mt-[10px]">
         <FontAwesomeIcon icon={faFire} />
         <h3 className="">Trending</h3>
       </div>
-      <div className="cursor-pointer flex items-center ml-7 gap-12 mt-[10px]">
+      <div className="cursor-pointer flex items-center md:ml-7 md:gap-12 ml-3 md:py-0  py-1.5 gap-5 mt-[10px]">
         <FontAwesomeIcon icon={faMusic} />
         <h3 className="">Music</h3>
       </div>
-      <div className="cursor-pointer flex items-center ml-7 gap-12 mt-[10px]">
+      <div className="cursor-pointer flex items-center md:ml-7 md:gap-12 ml-3 md:py-0  py-1.5 gap-5 mt-[10px]">
         <FontAwesomeIcon icon={faClapperboard} />
         <h3 className="">Movies</h3>
       </div>
-      <div className="cursor-pointer flex items-center ml-7 gap-12 mt-[10px]">
+      <div className="cursor-pointer flex items-center md:ml-7 md:gap-12 ml-3 md:py-0  py-1.5 gap-5 mt-[10px]">
         <FontAwesomeIcon icon={faGamepad} />
         <h3 className="">Gaming</h3>
       </div>
-      <div className="cursor-pointer flex items-center ml-7 gap-12 mt-[10px]">
+      <div className="cursor-pointer flex items-center md:ml-7 md:gap-12 ml-3 md:py-0  py-1.5 gap-5 mt-[10px]">
         <FontAwesomeIcon icon={faNewspaper} />
         <h3 className="">News</h3>
       </div>
-      <div className="cursor-pointer flex items-center ml-7 gap-12 mt-[10px]">
+      <div className="cursor-pointer flex items-center md:ml-7 md:gap-12 ml-3 md:py-0  py-1.5 gap-5 mt-[10px]">
         <FontAwesomeIcon icon={faTrophy} />
         <h3 className="">Sports</h3>
       </div>
-      <div className="cursor-pointer flex items-center ml-7 gap-12 mt-[10px]">
+      <div className="cursor-pointer flex items-center md:ml-7 md:gap-12 ml-3 md:py-0  py-1.5 gap-5 mt-[10px]">
         <FontAwesomeIcon icon={faBagShopping} />
         <h3 className="">Fashion & Beauty</h3>
       </div>

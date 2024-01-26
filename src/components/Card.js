@@ -6,23 +6,16 @@ const Card = ({ sidebar }) => {
       {cards.slice(0, 5).map((card) => (
         <div
           key={card.title}
-          className={`card cursor-pointer rounded-xl bg-transparent p-3 ${
-            sidebar ? "h-[20rem] w-[18rem]" : "h-[20rem] w-[20rem]"
+          className={`card cursor-pointer bg-transparent md:p-3 h-[20rem] w-full ${
+            sidebar ? "md:h-[20rem] md:w-[20rem]" : "md:h-[20rem] md:w-[22rem]"
           }`}
         >
-          {/* <div
-          key={card.title}
-          className={`card cursor-pointer rounded-xl bg-transparent${
-            sidebar ? "h-[18rem] w-[20rem] " : "h-[20rem] w-[20rem] "
-          }`}
-        > */}
           <img
             alt="thumbnail"
             src={card.imgLink}
-            className="rounded-xl"
+            className="md:rounded-xl"
             // className="rounded-xl h-[100%]  w-[100%]"
           />
-          {/* <div className="flex gap-3 mt-2 "> */}
           <div className="flex gap-2">
             <span>
               <img
@@ -35,8 +28,14 @@ const Card = ({ sidebar }) => {
             </span>
             <div>
               <h3>{card.title}</h3>
-              <h4 className="text-gray-400">{card.channelName}</h4>
-              <h4 className="text-gray-400">{card.details}</h4>
+              <div className="md:block flex gap-2">
+                <h4 className="text-gray-400 md:text-sm text-xs">
+                  {card.channelName}
+                </h4>
+                <h4 className="text-gray-400 md:text-sm text-xs">
+                  {card.details}
+                </h4>
+              </div>
             </div>
           </div>
         </div>

@@ -1,10 +1,6 @@
-// import { useState } from "react";
 import { faBars, faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SidebarDetails from "./SidebarDetails";
-// import HeaderSection from "./HeaderSection";
-// import { faYoutube } from "@fortawesome/free-brands-svg-icons";
-// import TagSection from "./TagSection";
 
 const SidebarSection = ({ sidebar, setSidebar }) => {
   return (
@@ -12,18 +8,13 @@ const SidebarSection = ({ sidebar, setSidebar }) => {
       className={`
     ${sidebar ? "z-[-1] " : ""}`}
     >
-      <div className="flex flex-col px-8 py-5 cursor-pointer ">
+      <div className="flex flex-col md:px-8 md:py-5 py-2 cursor-pointer ">
         <div
           className={` md:hidden block gap-3 items-center ${
-            sidebar ? "w-[240px] flex" : ""
+            sidebar ? "w-[250px] flex" : ""
           }`}
         >
-          <FontAwesomeIcon
-            icon={faBars}
-            className="mt-1 z-[50]"
-            onClick={() => setSidebar(!sidebar)}
-          />
-          <span className="flex items-center cursor-pointer mt-1">
+          <span className="flex items-center cursor-pointer mt-1 ml-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"

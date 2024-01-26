@@ -39,7 +39,11 @@ const HeaderSection = ({ openCloseDropDown }) => {
     <div className="m-3">
       <nav className="flex md:justify-between  text-white">
         <div className="flex items-center gap-3 mb-1 md:ml-6 cursor-pointer">
-          <FontAwesomeIcon icon={faBars} onClick={openCloseDropDown} />
+          <FontAwesomeIcon
+            icon={faBars}
+            onClick={openCloseDropDown}
+            className="md:block hidden"
+          />
           <span className="flex items-center cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -64,10 +68,11 @@ const HeaderSection = ({ openCloseDropDown }) => {
         <div className="flex items-center md:ml-0 ml-[180px]">
           <input
             placeholder="Search"
+            name="searchBar"
             type="text"
             className="bg-transparent border-2 border-[#282828] placeholder-[#717171]  rounded-l-full md:px-2 px-1 lg:pr-[290px] pr-[5px] py-1 w-full md:block hidden"
           />
-          <div className="md:bg-[#282828] h-full md:px-5 px-2 py-1 rounded-r-full cursor-pointer md:pl-3 pl-1">
+          <div className="md:bg-[#282828] h-full md:px-5 px-2 py-1 rounded-r-full cursor-pointer md:pl-3 pl-10">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </div>
           <div className="md:ml-4 ml-1 bg-[#282828] px-2.5 py-1 rounded-full cursor-pointer md:block hidden">

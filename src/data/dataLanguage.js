@@ -1,5 +1,11 @@
 const details = [
   {
+    language: "All",
+    url: "#",
+    bg: "white",
+    text: "black",
+  },
+  {
     language: "English (US)",
     url: "#",
   },

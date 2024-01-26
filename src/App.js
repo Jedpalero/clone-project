@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div
-      className={`h-screen w-[100%] grid  grid-rows-[60px_1fr] grid-cols-[0px_1fr] ${
+      className={`h-screen w-[100%] grid  grid-rows-[50px_1fr] grid-cols-[0px_1fr] ${
         sidebar ? "md:grid-cols-[240px_1fr] " : "md:grid-cols-[90px_1fr]"
       }`}
     >
@@ -60,13 +60,13 @@ function App() {
       </section>
 
       <main
-        className="grid main overflow-hidden  grid-rows-[60px_1fr] col-span-2 w-[inherit%]"
+        className="grid main overflow-hidden grid-rows-[50px_1fr] col-span-2 w-[inherit%]"
         onClick={closeDropDown}
       >
-        <div className="section h-[60px] md:z-[1]  overflow-hidden">
+        <div className="section h-[50px] md:z-[1]  overflow-hidden md:border-none border border-gray-700 ml-[-1px] mr-[-1px]">
           {isMobile ? (
             <>
-              <TagSectionCarousel />
+              <TagSectionCarousel openCloseDropDown={openCloseDropDown} />
             </>
           ) : (
             <>
