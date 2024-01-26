@@ -1,10 +1,9 @@
 const FooterSection = () => {
   return (
-    <div className="flex justify-between items-center text-white m-2 text-sm">
+    <div className="flex justify-between items-center text-white p-2 text-sm mr-3 ml-3">
       <div className="flex flex-col items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          enable-background="new 0 0 24 24"
           height="24"
           viewBox="0 0 24 24"
           width="24"

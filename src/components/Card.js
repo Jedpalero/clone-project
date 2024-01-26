@@ -2,23 +2,34 @@ import cards from "../data/cardDetails";
 
 const Card = ({ sidebar }) => {
   return (
-    <div className="gridzz  ml-8 mt-5 bg-transparent">
-      {cards.map((card) => (
+    <div className="gridzz">
+      {cards.slice(0, 5).map((card) => (
         <div
           key={card.title}
-          className={` card cursor-pointer rounded-xl bg-transparent${
-            sidebar ? "h-[280px] w-[300px] " : "h-[300px] w-[300px] "
+          className={`card cursor-pointer rounded-xl bg-transparent p-3 ${
+            sidebar ? "h-[20rem] w-[18rem]" : "h-[20rem] w-[20rem]"
           }`}
         >
-          <img alt="thumbnail" src={card.imgLink} className="rounded-xl " />
-          <div className="flex gap-3 mt-2 ">
+          {/* <div
+          key={card.title}
+          className={`card cursor-pointer rounded-xl bg-transparent${
+            sidebar ? "h-[18rem] w-[20rem] " : "h-[20rem] w-[20rem] "
+          }`}
+        > */}
+          <img
+            alt="thumbnail"
+            src={card.imgLink}
+            className="rounded-xl"
+            // className="rounded-xl h-[100%]  w-[100%]"
+          />
+          {/* <div className="flex gap-3 mt-2 "> */}
+          <div className="flex gap-2">
             <span>
               <img
                 id="img"
                 draggable="false"
-                className="rounded-full"
-                alt=""
-                width="48"
+                className="rounded-full max-w-[40px]"
+                alt="thumbnail"
                 src={card.logoLink}
               />
             </span>
