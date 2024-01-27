@@ -29,12 +29,12 @@ const cards = [
   },
   {
     imgLink:
-      "https://i.ytimg.com/vi/ru3U8MHbFFI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDCrQJiu3wRFRU91De8WQNxfm4c-A",
+      "https://i.ytimg.com/vi/tS7upsfuxmo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCWMV-BF5X8M1vQoXP6PGghFjWuBQ",
     logoLink:
-      "https://yt3.ggpht.com/ytc/AIf8zZRxB4nFdEqcC_k03diwmuSrFDlqfFEI_sv7fkc19g=s68-c-k-c0x00ffffff-no-rj",
-    title: "Use these instead of vh",
-    channelName: "Kevin Powell",
-    details: "279k views . 1 month ago",
+      "https://yt3.ggpht.com/wg1TITEoPfxvBGfzuqWyt3bqm_qu35ZhMswUv3feetU3xNX_6wsAXZF40OlPIgY4TmqbqCmAZ1U=s68-c-k-c0x00ffffff-no-rj",
+    title: "Tailwind CSS Full Course 2023 | Build and Deploy a Nike Website",
+    channelName: "JavaScript Mastery",
+    details: "352k views . 4 months ago",
   },
   {
     imgLink:
@@ -81,14 +81,15 @@ const cards = [
     channelName: "Namanh Kapur",
     details: "248k views . 1 months ago",
   },
+
   {
     imgLink:
-      "https://i.ytimg.com/vi/tS7upsfuxmo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCWMV-BF5X8M1vQoXP6PGghFjWuBQ",
+      "https://i.ytimg.com/vi/ru3U8MHbFFI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDCrQJiu3wRFRU91De8WQNxfm4c-A",
     logoLink:
-      "https://yt3.ggpht.com/wg1TITEoPfxvBGfzuqWyt3bqm_qu35ZhMswUv3feetU3xNX_6wsAXZF40OlPIgY4TmqbqCmAZ1U=s68-c-k-c0x00ffffff-no-rj",
-    title: "Tailwind CSS Full Course 2023 | Build and Deploy a Nike Website",
-    channelName: "JavaScript Mastery",
-    details: "352k views . 4 months ago",
+      "https://yt3.ggpht.com/ytc/AIf8zZRxB4nFdEqcC_k03diwmuSrFDlqfFEI_sv7fkc19g=s68-c-k-c0x00ffffff-no-rj",
+    title: "Use these instead of vh",
+    channelName: "Kevin Powell",
+    details: "279k views . 1 month ago",
   },
 ];
 

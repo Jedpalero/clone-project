@@ -6,7 +6,7 @@ const Card = ({ sidebar }) => {
       {cards.slice(0, 5).map((card) => (
         <div
           key={card.title}
-          className={`card cursor-pointer bg-transparent md:p-3 h-[20rem] w-full ${
+          className={`card cursor-pointer bg-transparent md:p-3 h-[20rem] ${
             sidebar ? "md:h-[20rem] md:w-[20rem]" : "md:h-[20rem] md:w-[22rem]"
           }`}
         >

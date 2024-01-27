@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import details from "../data/dataLanguage";
 import { motion } from "framer-motion";
 import { useRef } from "react";
