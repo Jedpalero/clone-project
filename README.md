@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Short Preview
+[Short preview.webm](https://github.com/Jedpalero/clone-project/assets/140801154/d5fc7402-8a6c-434d-8308-46e2ea31e8e1)
+
 ## Home Page
 
 ![Screenshot spotify-dynamic page](https://github.com/Jedpalero/clone-project/assets/140801154/f537e9d8-f0d6-4a74-9129-18372843379b)
