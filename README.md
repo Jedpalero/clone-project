@@ -1,32 +1,23 @@
-# Getting Started with Create React App
+# Spotify Clone using React and TailwindCSS
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Home Page
 
-In the project directory, you can run:
+![Screenshot spotify-dynamic page](https://github.com/Jedpalero/clone-project/assets/140801154/f537e9d8-f0d6-4a74-9129-18372843379b)
 
-### `npm start`
+## Search Page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![spotify-search page](https://github.com/Jedpalero/clone-project/assets/140801154/d530d4ba-e45e-4a7a-9217-8786763e8111)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Sidebar & Menu Link
 
-### `npm test`
+### \* Menu Link
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### \* Not Functional Search bar
 
-### `npm run build`
+![spotify-sidebar](https://github.com/Jedpalero/clone-project/assets/140801154/a44d9f4f-875c-4168-88e9-870bb7b801c7)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Player(non-functional)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
+![spotify-player bar](https://github.com/Jedpalero/clone-project/assets/140801154/73c3278f-a0e5-432c-98ac-6a79ba800456)
