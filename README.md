@@ -22,7 +22,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ![spotify-player bar](https://github.com/Jedpalero/clone-project/assets/140801154/73c3278f-a0e5-432c-98ac-6a79ba800456)
 
-### It is also mobile responsive
+## It is also mobile responsive
 
 | Home Page                            | Search Page                            | Library Page                                     |
 | ----------------------------------- | ----------------------------------- | ------------------------------------------- |
