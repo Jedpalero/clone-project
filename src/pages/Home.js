@@ -77,7 +77,7 @@ const Home = () => {
           {details.map((detail) => (
             <div
               key={detail.channelName}
-              className={`top flex flex-wrap items-center bg-[#121212] bg-opacity-40 rounded-md ${
+              className={`top flex relative flex-wrap items-center bg-[#121212] bg-opacity-40 rounded-md ${
                 sidebar ? "w-[460px]" : "md:w-[580px] w-[150px]"
               }`}
             >
