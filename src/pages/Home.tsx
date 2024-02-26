@@ -5,7 +5,6 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
 import Card from "../components/Card";
 import { useOutletContext } from "react-router-dom";
 import details from "../data/homeCardDetails";
@@ -16,7 +15,7 @@ import CardSwipeCarousel from "../mobile/CardSwipeCarousel";
 import CardRecentlyCarousel from "../mobile/CardRecentlyCarousel";
 
 const Home = () => {
-  const [sidebar] = useOutletContext();
+  const [sidebar]: any = useOutletContext();
   const [isMobile, setIsMobile] = useState(() => window.innerWidth < 720);
 
   //choose the screen size
@@ -38,11 +37,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col text-white mb-3">
-      <div
-        className={`md:flex items-center justify-between mb-1 p-6 hidden ${
-          sidebar ? "" : ""
-        }`}
-      >
+      <div className="md:flex items-center justify-between mb-1 p-6 hidden">
         <div className="flex gap-2 text-3xl">
           <FontAwesomeIcon icon={faChevronCircleLeft} />
           <FontAwesomeIcon icon={faChevronCircleRight} />

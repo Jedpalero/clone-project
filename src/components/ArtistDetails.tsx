@@ -3,6 +3,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DropdownMenu from "./DropdownMenu";
 import details from "../data/libraryDetails";
 
+type ArtistDetailsProps = {
+  sidebar: boolean;
+  showInput: boolean;
+  showDropMenu: boolean;
+  openCloseInput: () => void;
+  openCloseDropDown: () => void;
+  closeSameFunction: () => void;
+};
+
 const ArtistDetails = ({
   sidebar,
   showInput,
@@ -10,9 +19,9 @@ const ArtistDetails = ({
   openCloseInput,
   openCloseDropDown,
   closeSameFunction,
-}) => {
+}: ArtistDetailsProps) => {
   return (
-    <div className={`space-y-3 ${sidebar ? "" : ""}`}>
+    <div className="space-y-3">
       {sidebar && (
         <>
           <div className="flex relative items-center overflow-hidden pt-3 pb-3">

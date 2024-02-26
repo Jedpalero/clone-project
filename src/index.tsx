@@ -7,10 +7,10 @@ import {
   RouterProvider,
   createRoutesFromElements,
 } from "react-router";
-import Home from "./pages/Home.js";
-import Search from "./pages/Search.js";
-import App from "./App.js";
-import Library from "./mobile/Library.js";
+import Home from "./pages/Home";
+import Search from "./pages/Search";
+import App from "./App";
+import Library from "./mobile/Library";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +23,6 @@ const router = createBrowserRouter(
   )
 );
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <RouterProvider router={router} />
 );

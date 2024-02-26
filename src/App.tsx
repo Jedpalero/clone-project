@@ -8,7 +8,7 @@ import { MyContext } from "./MyContext";
 const [minWidth, maxWidth] = [70, 470];
 
 function App() {
-  const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState<boolean>(false);
   const [width, setWidth] = useState(minWidth);
   const [showInput, setShowInput] = useState(false);
   const [showDropMenu, setShowDropMenu] = useState(false);

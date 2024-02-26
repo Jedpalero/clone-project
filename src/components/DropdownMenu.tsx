@@ -1,6 +1,14 @@
 import { TfiMenuAlt } from "react-icons/tfi";
 
-const DropdownMenu = ({ openCloseDropDown, showDropMenu }) => {
+type DropdownMenuProps = {
+  openCloseDropDown: () => void;
+  showDropMenu: boolean;
+};
+
+const DropdownMenu = ({
+  openCloseDropDown,
+  showDropMenu,
+}: DropdownMenuProps) => {
   return (
     <div className="flex absolute items-center gap-1 ml-[19rem]">
       <div className="flex items-center gap-2 ml-[4rem]">

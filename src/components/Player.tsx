@@ -8,7 +8,6 @@ import {
   faSquareCaretRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
 import { TbMicrophone2 } from "react-icons/tb";
 import { HiOutlineQueueList } from "react-icons/hi2";
 import { BiSolidVolumeFull } from "react-icons/bi";
@@ -17,8 +16,8 @@ import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { useState } from "react";
 
 const Player = () => {
-  const [play, setPlay] = useState(false);
-  const [like, setLike] = useState(false);
+  const [play, setPlay] = useState<boolean>(false);
+  const [like, setLike] = useState<boolean>(false);
 
   return (
     <div className="flex justify-between text-white mt-5">

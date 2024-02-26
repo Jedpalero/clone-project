@@ -2,7 +2,6 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 import { FaSpotify } from "react-icons/fa";
-// import { useState } from "react";
 
 const FooterMenu = () => {
   return (
@@ -64,16 +63,9 @@ const FooterMenu = () => {
         </NavLink>
       </div>
 
-      <div className="p-5 mt-2">
-        <NavLink
-          className="flex flex-col items-center"
-          style={({ isActive }) => ({
-            color: isActive ? "gray" : "gray",
-          })}
-        >
-          <FaSpotify className="h-4" />
-          <h3 className="text-[10px]">Premium</h3>
-        </NavLink>
+      <div className="p-5 mt-2 items-center flex flex-col text-gray-500">
+        <FaSpotify className="h-4 " />
+        <h3 className="text-[10px]">Premium</h3>
       </div>
     </div>
   );

@@ -8,15 +8,23 @@ import { MyContext } from "../MyContext";
 // const [minWidth, maxWidth, defaultWidth] = [100, 500, 350];
 const [minWidth1, maxWidth1] = [70, 470];
 
+type SidebarProps = {
+  sidebar: boolean;
+  width: number;
+  setWidth: React.Dispatch<React.SetStateAction<number>>;
+  handleMax: () => void;
+  handleMin: () => void;
+};
+
 export default function Sidebar({
   sidebar,
   width,
   setWidth,
   handleMax,
   handleMin,
-}) {
+}: SidebarProps) {
   const isResized = useRef(false);
-  const slide = useRef();
+  const slide = useRef(null);
 
   const {
     showInput,

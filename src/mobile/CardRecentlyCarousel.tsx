@@ -3,12 +3,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 
 const CardRecentlyCarousel = () => {
-  // const [width, setWidth] = useState(0);
   const carousel = useRef(null);
-
-  // useEffect(() => {
-  //   setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  // }, []);
 
   return (
     <motion.div
@@ -16,12 +11,7 @@ const CardRecentlyCarousel = () => {
       whileTap={{ cursor: "grabbing" }}
       className="gap-[1.5rem] flex  mb-5 mt-5"
     >
-      <motion.div
-        className="flex"
-        drag="x"
-        // dragConstraints={{ right: 0, left: -width }}
-        dragConstraints={carousel}
-      >
+      <motion.div className="flex" drag="x" dragConstraints={carousel}>
         {cards.map((card) => (
           <motion.div
             key={card.title}
