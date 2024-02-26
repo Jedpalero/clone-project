@@ -2,7 +2,11 @@ import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SidebarDetails from "./SidebarDetails";
 
-const SidebarSection = ({ sidebar, setSidebar }) => {
+type SidebarSectionProps = {
+  sidebar: boolean;
+};
+
+const SidebarSection = ({ sidebar }: SidebarSectionProps) => {
   return (
     <div
       className={`

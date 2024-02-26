@@ -1,6 +1,11 @@
 import cards from "../data/shortCardDetails";
 
-const ShortsCard = ({ sidebar, show }) => {
+type ShortsCardProps = {
+  sidebar: boolean;
+  show: boolean;
+};
+
+const ShortsCard = ({ sidebar, show }: ShortsCardProps) => {
   return (
     <div className={`${show ? "flex flex-wrap gap-3" : "gridz"}`}>
       {cards.map((card) => (

@@ -3,8 +3,12 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { IoCompassOutline } from "react-icons/io5";
 
-const TagSectionCarousel = ({ openCloseDropDown }) => {
-  const slide = useRef();
+type TagSectionCarouselProps = {
+  openCloseDropDown: () => void;
+};
+
+const TagSectionCarousel = ({ openCloseDropDown }: TagSectionCarouselProps) => {
+  const slide = useRef(null);
 
   return (
     <motion.div

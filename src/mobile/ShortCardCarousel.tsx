@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 
 const ShortCardCarousel = () => {
-  const carousel = useRef();
+  const carousel = useRef(null);
 
   return (
     <motion.div

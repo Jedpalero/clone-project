@@ -1,6 +1,10 @@
 import cards from "../data/cardDetails";
 
-const Card = ({ sidebar }) => {
+type CardProps = {
+  sidebar: boolean;
+};
+
+const Card = ({ sidebar }: CardProps) => {
   return (
     <div className="gridzz">
       {cards.slice(0, 5).map((card) => (

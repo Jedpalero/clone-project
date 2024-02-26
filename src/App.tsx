@@ -45,10 +45,7 @@ function App() {
       }`}
     >
       <header className="header w-[inherit] md:z-10" onClick={closeDropDown}>
-        <HeaderSection
-          openCloseDropDown={openCloseDropDown}
-          isMobile={isMobile}
-        />
+        <HeaderSection openCloseDropDown={openCloseDropDown} />
       </header>
 
       <section
@@ -56,7 +53,7 @@ function App() {
           sidebar ? "md:hover:overflow-y-scroll overflow-y-hidden" : "hidden "
         }`}
       >
-        <SidebarSection sidebar={sidebar} setSidebar={setSidebar} />
+        <SidebarSection sidebar={sidebar} />
       </section>
 
       <main
@@ -80,50 +77,10 @@ function App() {
         </div>
 
         <div className="footer fixed bottom-0 w-[100%] max-w-[100%] md:hidden bg-[#0f0f0f]">
-          <FooterSection sidebar={sidebar} />
+          <FooterSection />
         </div>
       </main>
     </div>
-    // <div
-    //   className={`h-screen w-[100%] grid  grid-rows-[60px_1fr] grid-cols-[0px_1fr] ${
-    //     sidebar ? "md:grid-cols-[240px_1fr] " : "md:grid-cols-[90px_1fr]"
-    //   }`}
-    // >
-    //   <header
-    //     className="header fixed w-[inherit]  max-w-[inherit] md:z-10"
-    //     onClick={closeDropDown}
-    //   >
-    //     <HeaderSection
-    //       openCloseDropDown={openCloseDropDown}
-    //       isMobile={isMobile}
-    //     />
-    //   </header>
-
-    //   <section
-    //     className={`md:bg-[#0f0f0f]  bg-[#212121]  sidebar md:fixed md:block  scrollbar max-h-[inherit] md:z-0 z-10 ${
-    //       sidebar ? "md:hover:overflow-y-scroll overflow-y-hidden" : "hidden "
-    //     }`}
-    //   >
-    //     <SidebarSection sidebar={sidebar} setSidebar={setSidebar} />
-    //   </section>
-
-    //   <main
-    //     className="main grid-rows-[60px_1fr] col-span-2 w-[inherit]"
-    //     onClick={closeDropDown}
-    //   >
-    //     <div className="section w-[100%] max-w-[100%] h-[60px] bg-[#0f0f0f] md:z-[1] z-[-2]">
-    //       <TagSection />
-    //     </div>
-
-    //     <div className="section1 scrollbar  bg-[#0f0f0f] overflow-y-scroll">
-    //       <LandingSection isMobile={isMobile} />
-    //     </div>
-
-    //     <div className="footer fixed bottom-0 w-[100%] max-w-[100%] md:hidden bg-[#0f0f0f]">
-    //       <FooterSection sidebar={sidebar} />
-    //     </div>
-    //   </main>
-    // </div>
   );
 }
 

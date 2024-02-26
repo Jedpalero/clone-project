@@ -6,36 +6,13 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { useRef, useEffect } from "react";
 
-const HeaderSection = ({ openCloseDropDown }) => {
-  // const headerRef = useRef(null);
+type HeaderSectionProps = {
+  openCloseDropDown: () => void;
+};
 
-  // useEffect(() => {
-  //   let prevScrollPos = window.scrollY;
-
-  //   const handleScroll = () => {
-  //     const currentScrollPos = window.scrollY;
-  //     const headerElement = headerRef.current;
-  //     if (!headerElement) {
-  //       return;
-  //     }
-  //     if (prevScrollPos > currentScrollPos) {
-  //       headerElement.style.transform = "translateY(0)";
-  //     } else {
-  //       headerElement.style.transform = "translateY(-200px)";
-  //     }
-  //     prevScrollPos = currentScrollPos;
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
+const HeaderSection = ({ openCloseDropDown }: HeaderSectionProps) => {
   return (
-    // ref={headerRef}
     <div className="m-3">
       <nav className="flex md:justify-between  text-white">
         <div className="flex items-center gap-3 mb-1 md:ml-6 cursor-pointer">

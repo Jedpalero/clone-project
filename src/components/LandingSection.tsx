@@ -5,8 +5,13 @@ import { useState } from "react";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import ShortCardCarousel from "../mobile/ShortCardCarousel";
 
-const LandingSection = ({ sidebar, isMobile }) => {
-  const [show, setShow] = useState(false);
+type LandingSectionProps = {
+  sidebar: boolean;
+  isMobile: boolean;
+};
+
+const LandingSection = ({ sidebar, isMobile }: LandingSectionProps) => {
+  const [show, setShow] = useState<boolean>(false);
 
   return (
     <div className={` text-white md:mb-0 mb-[3rem] ${sidebar ? "" : ""}`}>
