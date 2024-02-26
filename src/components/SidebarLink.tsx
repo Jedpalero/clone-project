@@ -5,7 +5,13 @@ import { NavLink } from "react-router-dom";
 
 const [minWidth, maxWidth] = [70, 470];
 
-const SidebarLink = ({ sidebar, width, setWidth }) => {
+type SidebarLinkProps = {
+  sidebar: boolean;
+  width: number;
+  setWidth: React.Dispatch<React.SetStateAction<number>>;
+};
+
+const SidebarLink = ({ sidebar, width, setWidth }: SidebarLinkProps) => {
   const isResized = useRef(false);
 
   useEffect(() => {

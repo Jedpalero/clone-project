@@ -11,7 +11,7 @@ import { useOutletContext } from "react-router-dom";
 import FooterMenu from "../components/FooterMenu";
 
 const Search = () => {
-  const [sidebar] = useOutletContext();
+  const [sidebar]: any = useOutletContext();
 
   return (
     <div className="flex flex-col text-white ">

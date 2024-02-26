@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 
 const CardSwipeCarousel = () => {
-  const carousel = useRef();
+  const carousel = useRef<null>(null);
 
   return (
     <motion.div

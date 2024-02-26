@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 
 const Library = () => {
-  const slide = useRef();
+  const slide = useRef<null>(null);
 
   return (
     <div className="overflow-y-hidden">
