@@ -1,4 +1,12 @@
-const cards = [
+type CardsProps = {
+  imgLink: string;
+  logoLink: string;
+  title: string;
+  channelName: string;
+  details: string;
+}
+
+const cards: CardsProps[] = [
   {
     imgLink:
       "https://i.ytimg.com/vi/LMSVPAObR3E/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDUYJ1ev7OOkzP5xV3UEXC6km50oQ",
