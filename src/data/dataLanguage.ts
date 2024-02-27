@@ -1,4 +1,5 @@
-const details = [
+
+const details: ({language: string, url: string}[]) = [
   {
     language: "English (US)",
     url: "#",

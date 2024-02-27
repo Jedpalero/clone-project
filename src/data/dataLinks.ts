@@ -1,4 +1,9 @@
-const detailLink = [
+type DetailLinkProps = {
+    site: string;
+    url: string;
+  }
+
+const detailLink: DetailLinkProps[] = [
   {
     site: "Sign Up",
     url: "#",

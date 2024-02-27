@@ -1,4 +1,3 @@
-import React from "react";
 import details from "../data/dataLanguage";
 import detailLink from "../data/dataLinks";
 
@@ -9,7 +8,7 @@ const FooterSection = () => {
         <div className="flex gap-2 mb-2 md:max-w-5xl max-w-sm md:flex m-auto">
           <ul className="flex-wrap flex gap-2 items-center w-full">
             {details.map((detail) => (
-              <li key={detail.language} className="">
+              <li key={detail.language}>
                 <a href={detail.url} className="cursor-pointer hover:underline">
                   {detail.language}
                 </a>
@@ -25,7 +24,7 @@ const FooterSection = () => {
         <div className="flex md:max-w-5xl md:flex max-w-sm m-auto">
           <ul className="flex-wrap flex gap-x-6 gap-1 items-center w-full">
             {detailLink.map((detail) => (
-              <li key={detail.site} className="">
+              <li key={detail.site}>
                 <a href={detail.url} className="cursor-pointer hover:underline">
                   {detail.site}
                 </a>
